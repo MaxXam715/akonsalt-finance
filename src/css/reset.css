@@ -76,6 +76,7 @@ ol[class] {
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 
 a {
+  display: block;
   color: inherit;
   color: blue;
   text-decoration: none;

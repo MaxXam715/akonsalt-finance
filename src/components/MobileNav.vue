@@ -1,8 +1,12 @@
 <script setup>
-import {ref} from "vue";
+import {ref, watch} from "vue";
+import LogoNew from "../assets/img/logo-2.svg";
+import {phoneNumber} from "../js/Helpers.js";
+
+const phone = import.meta.env.VITE_PHONE;
+const phoneMask = phoneNumber(phone);
 
 const isShow = ref(false);
-
 function toggleMenu() {
   isShow.value = !isShow.value;
 }
@@ -14,12 +18,30 @@ function toggleMenu() {
   </button>
 
   <teleport to="#app">
-    <transition name="slide-left">
-      <aside v-if="isShow" class="mobile-menu">
-        <a href="#1">111</a>
-        <a href="#1">222</a>
-        <a href="#1">333</a>
-      </aside>
+    <transition name="toggle-nav">
+      <div v-if="isShow" class="mobile-menu" :class="{ 'show': isShow }">
+        <div class="nav-container">
+          <button type="button" class="btn btn-outline btn-aspect btn-close-nav" @click="toggleMenu">
+            <i class="icon close"></i>
+          </button>
+
+          <router-link to="/" class="logo-container" @click="toggleMenu">
+            <img :src="LogoNew" alt="logo">
+          </router-link>
+          <nav class="nav-wrapper">
+            <router-link to="/about" class="item" @click="toggleMenu">Обо мне</router-link>
+            <router-link to="/cases" class="item" @click="toggleMenu">Кейсы</router-link>
+            <router-link to="/services" class="item" @click="toggleMenu">Услуги</router-link>
+            <router-link to="/blog" class="item" @click="toggleMenu">Блог</router-link>
+            <router-link to="/contacts" class="item" @click="toggleMenu">Контакты</router-link>
+          </nav>
+          <a :href="'tel:' + phoneMask" class="btn btn-outline btn-shadow btn-call">{{ phoneMask }}</a>
+        </div>
+        <div class="action-wrapper">
+          <button type="button" class="btn btn-primary">Записаться на консультацию</button>
+          <button type="button" class="btn btn-outline btn-shadow">Заказать услугу</button>
+        </div>
+      </div>
     </transition>
   </teleport>
 </template>
@@ -39,11 +61,95 @@ function toggleMenu() {
 }
 
 .mobile-menu {
-  position: absolute;
-  left: 0;
+  position: fixed;
   top: 0;
-  width: 350px;
-  background-color: #A1A1AA;
-  height: 100dvh;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #030C0F;
+  transition: all 200ms;
+
+  .nav-container {
+    position: relative;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 32px;
+    opacity: 0;
+    transition: opacity 2000ms;
+
+    .btn-close-nav {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 48px;
+      border: 1px solid #ccc;
+
+      .icon {
+        font-size: 12px;
+      }
+    }
+
+    .logo-container {
+      margin-bottom: 40px;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 24px;
+      margin-bottom: 80px;
+
+      .item {
+        color: var(--Black);
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .btn-call {
+      width: 100%;
+      border-color: #E4E5E8;
+      color: var(--Black);
+    }
+  }
+
+  .action-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    margin-top: 20px;
+
+    .btn {
+      width: 100%;
+      height: 52px;
+    }
+  }
+
+  &.show {
+    .nav-container {
+      opacity: 1;
+    }
+  }
+}
+
+
+@keyframes toggle-nav {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.toggle-nav-enter-active,
+.toggle-nav-leave-active {
+  animation: 330ms toggle-nav ease-in-out;
+}
+
+.toggle-nav-leave-active {
+  animation-direction: reverse;
 }
 </style>

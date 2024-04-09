@@ -1,5 +1,13 @@
 <script setup>
+import {phoneNumber} from "../js/Helpers.js";
+
 const phone = import.meta.env.VITE_PHONE;
+const legal_IP = import.meta.env.VITE_LEGAL_IP;
+const legal_INN = import.meta.env.VITE_LEGAL_INN;
+const legal_OGRNIP = import.meta.env.VITE_LEGAL_OGRNIP;
+
+const phoneMask = phoneNumber(phone);
+const currentYear = new Date().getFullYear();
 </script>
 
 <template>
@@ -11,21 +19,21 @@ const phone = import.meta.env.VITE_PHONE;
         <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.</p>
       </div>
       <div class="row-events">
-        <a href="#" class="btn btn-outline">Telegram</a>
-        <a href="#" class="btn btn-outline">WhatsApp</a>
-        <a href="#" class="btn btn-outline">{{ phone }}</a>
+        <a :href="`https://t.me/`+phone" target="_blank" class="btn btn-outline">Telegram</a>
+        <a :href="`https://wa.me/`+phone" target="_blank" class="btn btn-outline">WhatsApp</a>
+        <a :href="'tel:' + phoneMask " class="btn btn-outline">{{ phoneMask }}</a>
         <button type="button" class="btn btn-primary">Заказать звонок</button>
       </div>
       <div class="cooperate-container">
         <div class="user-info">
-          <span>ИП Кешишян Андраник Саркисович</span>
-          <span>ИНН 610601804601</span>
-          <span>ОГРНИП 323619600191282</span>
-          <a href="/">Реестр НОК</a>
+          <span>ИП {{ legal_IP }}</span>
+          <span>ИНН {{ legal_INN }}</span>
+          <span>ОГРНИП {{ legal_OGRNIP }}</span>
+          <a href="https://nok-nark.ru/cert/list/?filter%5BCODE%5D=08.00800.01.00000003.27&filter%5BACTIVE_FROM%5D=11.01.2024&sort%5Bby%5D=CODE&sort%5Border%5D=asc" target="_blank">Реестр НОК</a>
         </div>
         <div class="tech-block">
           <router-link to="/privacy-policy">Политика конфиденциальности</router-link>
-          <span>© 2023 Все права защищены</span>
+          <span>© {{ currentYear }} Все права защищены</span>
         </div>
       </div>
     </div>
@@ -37,6 +45,7 @@ const phone = import.meta.env.VITE_PHONE;
   position: relative;
   padding-top: 80px;
   padding-bottom: 60px;
+  overflow: hidden;
 
   &:before {
     content: "";
@@ -54,12 +63,22 @@ const phone = import.meta.env.VITE_PHONE;
     background: linear-gradient(90deg, #06B6D4 0%, #1E40AF 100%);
   }
 
+  .G-container {
+    position: relative;
+    z-index: 2;
+  }
+
   .top-line {
-    width: 670px;
+    width: 100%;
+    max-width: 670px;
     height: 1px;
     margin: 0 auto;
     margin-bottom: 100px;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(2, 132, 199, 0.65) 50%, rgba(0, 0, 0, 0.00) 100%);
+
+    @media (max-width: 800px) {
+      margin-bottom: 80px;
+    }
   }
 
   .text-block {
@@ -67,12 +86,16 @@ const phone = import.meta.env.VITE_PHONE;
     max-width: 490px;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 130px;
+    margin-bottom: 60px;
 
     .heading {
       font-size: 48px;
       font-weight: 700;
       margin-bottom: 20px;
+
+      @media (max-width: 800px) {
+        font-size: 42px;
+      }
     }
 
     .desc {
@@ -82,6 +105,10 @@ const phone = import.meta.env.VITE_PHONE;
       font-weight: 400;
       line-height: 150%; /* 24px */
     }
+
+    @media (max-width: 800px) {
+      margin-bottom: 40px;
+    }
   }
 
   .row-events {
@@ -90,6 +117,15 @@ const phone = import.meta.env.VITE_PHONE;
     grid-gap: 10px;
     justify-content: center;
     margin-bottom: 130px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      margin-bottom: 80px;
+
+      .btn {
+        width: 270px;
+      }
+    }
   }
 
   .cooperate-container {
@@ -136,6 +172,18 @@ const phone = import.meta.env.VITE_PHONE;
         color: #fff;
       }
     }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      grid-gap: 40px;
+    }
   }
+
+  @media (max-width: 800px) {
+    padding-bottom: 40px;
+  }
+
 }
 </style>

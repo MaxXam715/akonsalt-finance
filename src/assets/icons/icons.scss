@@ -22,4 +22,9 @@
         mask-image: url(./phone.svg);
         -webkit-mask-image: url(./phone.svg);
     }
+
+    &.close {
+        mask-image: url(./close.svg);
+        -webkit-mask-image: url(./close.svg);
+    }
 }

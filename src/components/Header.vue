@@ -1,8 +1,10 @@
 <script setup>
 import MobileNav from "./MobileNav.vue";
 import LogoImg from "../assets/img/logo.svg"
+import {phoneNumber} from "../js/Helpers.js";
 
 const phone = import.meta.env.VITE_PHONE;
+const phoneMask = phoneNumber(phone);
 </script>
 
 <template>
@@ -15,17 +17,16 @@ const phone = import.meta.env.VITE_PHONE;
       </div>
       <div class="col-nav">
         <nav class="nav-wrapper">
-          <router-link to="/about" class="item">Обо мне</router-link>
+          <router-link to="/about" class="item" >Обо мне</router-link>
           <router-link to="/cases" class="item">Кейсы</router-link>
           <router-link to="/services" class="item">Услуги</router-link>
           <router-link to="/blog" class="item">Блог</router-link>
-          <router-link to="/login" class="item">Личный кабинет</router-link>
           <router-link to="/contacts" class="item">Контакты</router-link>
         </nav>
       </div>
       <div class="col-events">
-        <a :href="'tel:' + phone" class="btn btn-outline btn-shadow btn-tel-number">{{ phone }}</a>
-        <a :href="'tel:' + phone" class="btn btn-outline btn-aspect btn-tel-icon"><i class="icon phone"></i></a>
+        <a :href="'tel:' + phoneMask" class="btn btn-outline btn-shadow btn-tel-number">{{ phoneMask }}</a>
+        <a :href="'tel:' + phoneMask" class="btn btn-outline btn-aspect btn-tel-icon"><i class="icon phone"></i></a>
         <mobile-nav/>
       </div>
     </div>
@@ -33,13 +34,15 @@ const phone = import.meta.env.VITE_PHONE;
 </template>
 
 <style lang="scss" scoped>
-@import "../assets/animations/slide-left.scss";
-
 .G-header {
   position: sticky;
   top: 0;
+  z-index: 10;
   height: 110px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
   .G-container {
     display: flex;
