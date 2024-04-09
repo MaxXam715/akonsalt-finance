@@ -1,16 +1,18 @@
 <script setup>
-
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <header>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/contact">Contact</router-link>
-
-    <router-view/>
-  </header>
+  <Header></Header>
+  <router-view/>
+  <Footer></Footer>
 </template>
 
 <style>
+@import "./css/fonts.css";
+@import "./css/variables.css";
+@import "./css/uikit.scss";
+@import "./css/global.scss";
+@import "./css/reset.css";
 </style>

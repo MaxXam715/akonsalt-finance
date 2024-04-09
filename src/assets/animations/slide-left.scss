@@ -1,0 +1,20 @@
+@keyframes slide-left {
+  0% {
+    transform: rotateY(-100deg);
+    transform-origin: left;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    transform-origin: left;
+    opacity: 1;
+  }
+}
+
+.slide-left-enter-active, .slide-left-leave-active {
+  animation: 330ms slide-left ease-in-out;
+}
+
+.slide-left-leave-active {
+  animation-direction: reverse;
+}
