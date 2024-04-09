@@ -12,6 +12,7 @@ import Footer from "./components/Footer.vue";
 <style>
 @import "./css/fonts.css";
 @import "./css/variables.css";
+@import "./assets/icons/icons.scss";
 @import "./css/uikit.scss";
 @import "./css/global.scss";
 @import "./css/reset.css";

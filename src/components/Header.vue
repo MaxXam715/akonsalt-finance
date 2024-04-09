@@ -10,21 +10,22 @@ const phone = import.meta.env.VITE_PHONE;
     <div class="G-container">
       <div class="col-logo">
         <router-link to="/">
-          <img :src="LogoImg" alt="logo">
+          <img :src="LogoImg" alt="logo" class="logo">
         </router-link>
       </div>
       <div class="col-nav">
         <nav class="nav-wrapper">
           <router-link to="/about" class="item">Обо мне</router-link>
-          <router-link to="/about" class="item">Кейсы</router-link>
-          <router-link to="/about" class="item">Услуги</router-link>
-          <router-link to="/about" class="item">Блог</router-link>
-          <router-link to="/about" class="item">Личный кабинет</router-link>
-          <router-link to="/about" class="item">Контакты</router-link>
+          <router-link to="/cases" class="item">Кейсы</router-link>
+          <router-link to="/services" class="item">Услуги</router-link>
+          <router-link to="/blog" class="item">Блог</router-link>
+          <router-link to="/login" class="item">Личный кабинет</router-link>
+          <router-link to="/contacts" class="item">Контакты</router-link>
         </nav>
       </div>
       <div class="col-events">
-        <a :href="'tel:' + phone" class="btn btn-outline btn-shadow">{{ phone }}</a>
+        <a :href="'tel:' + phone" class="btn btn-outline btn-shadow btn-tel-number">{{ phone }}</a>
+        <a :href="'tel:' + phone" class="btn btn-outline btn-aspect btn-tel-icon"><i class="icon phone"></i></a>
         <mobile-nav/>
       </div>
     </div>
@@ -46,6 +47,14 @@ const phone = import.meta.env.VITE_PHONE;
     justify-content: space-between;
     grid-gap: 20px;
     height: 100%;
+  }
+
+  .col-logo {
+    .logo {
+      @media (max-width: 767px) {
+        width: 167px;
+      }
+    }
   }
 
   .col-nav {
@@ -75,10 +84,34 @@ const phone = import.meta.env.VITE_PHONE;
     display: flex;
     align-items: center;
     grid-gap: 10px;
+
+    .btn-tel-number {
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .btn-tel-icon {
+      width: 44px;
+
+      .icon {
+        background-color: var(--Gray-1);
+        font-size: 15px;
+      }
+
+      @media (min-width: 767px) {
+        display: none;
+      }
+    }
   }
 
   @media (max-width: 1300px) {
     height: 90px;
+  }
+
+  @media (max-width: 767px) {
+    height: 75px;
   }
 }
 </style>

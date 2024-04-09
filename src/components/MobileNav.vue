@@ -16,7 +16,7 @@ function toggleMenu() {
   <teleport to="#app">
     <transition name="slide-left">
       <aside v-if="isShow" class="mobile-menu">
-        <a href="#1">{{ formatPhone(112233) }}</a>
+        <a href="#1">111</a>
         <a href="#1">222</a>
         <a href="#1">333</a>
       </aside>
@@ -29,8 +29,12 @@ function toggleMenu() {
   width: 44px;
 
   .icon {
-    background-color: #fff;
+    background-color: var(--Gray-1);
     font-size: 15px;
+  }
+
+  @media (min-width: 1300px) {
+    display: none;
   }
 }
 
