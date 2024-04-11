@@ -37,10 +37,6 @@ function toggleMenu() {
           </nav>
           <a :href="'tel:' + phoneMask" class="btn btn-outline btn-shadow btn-call">{{ phoneMask }}</a>
         </div>
-        <div class="action-wrapper">
-          <button type="button" class="btn btn-primary">Записаться на консультацию</button>
-          <button type="button" class="btn btn-outline btn-shadow">Заказать услугу</button>
-        </div>
       </div>
     </transition>
   </teleport>
@@ -68,7 +64,7 @@ function toggleMenu() {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background-color: #030C0F;
+  background-color: rgba(3, 12, 15, 0.5);
   transition: all 200ms;
 
   .nav-container {
@@ -112,18 +108,6 @@ function toggleMenu() {
       width: 100%;
       border-color: #E4E5E8;
       color: var(--Black);
-    }
-  }
-
-  .action-wrapper {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 20px;
-    margin-top: 20px;
-
-    .btn {
-      width: 100%;
-      height: 52px;
     }
   }
 

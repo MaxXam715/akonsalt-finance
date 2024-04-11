@@ -112,6 +112,9 @@
 h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 700;
+}
+
+.heading-gradient {
   background: linear-gradient(135deg, #F4F4F5 0%, #52525B 100%);
   background-clip: text;
   -webkit-background-clip: text;

@@ -57,11 +57,12 @@ function handleScroll() {
   background-color: transparent;
   backdrop-filter: blur(0);
   -webkit-backdrop-filter: blur(0);
-  transition: all 200ms;
+  transition: all 200ms, height 600ms;
 
   &.is-scrolled {
+    height: 80px;
     border-bottom-color: rgba(255, 255, 255, 0.1);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(2, 7, 15, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
