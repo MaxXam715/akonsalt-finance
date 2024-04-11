@@ -16,5 +16,5 @@ export default defineComponent({
 <template>
   <FirstScreen />
   <AboutMe />
-  <MyServices />
+<!--  <MyServices />-->
 </template>

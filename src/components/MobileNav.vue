@@ -1,5 +1,5 @@
 <script setup>
-import {ref, watch} from "vue";
+import {nextTick, ref, watch} from "vue";
 import LogoNew from "../assets/img/logo-2.svg";
 import {phoneNumber} from "../js/Helpers.js";
 
@@ -7,8 +7,14 @@ const phone = import.meta.env.VITE_PHONE;
 const phoneMask = phoneNumber(phone);
 
 const isShow = ref(false);
+const isShowClass = ref(false);
+
 function toggleMenu() {
   isShow.value = !isShow.value;
+
+  requestAnimationFrame( () => {
+    isShowClass.value = !isShowClass.value;
+  });
 }
 </script>
 
@@ -18,8 +24,8 @@ function toggleMenu() {
   </button>
 
   <teleport to="#app">
-    <transition name="toggle-nav">
-      <div v-if="isShow" class="mobile-menu" :class="{ 'show': isShow }">
+    <transition>
+      <div v-if="isShow" class="mobile-menu" :class="{ 'show' : isShowClass}">
         <div class="nav-container">
           <button type="button" class="btn btn-outline btn-aspect btn-close-nav" @click="toggleMenu">
             <i class="icon close"></i>
@@ -63,17 +69,24 @@ function toggleMenu() {
   z-index: 11;
   width: 100%;
   height: 100%;
-  padding: 20px;
-  background-color: rgba(3, 12, 15, 0.5);
+  padding: 16px;
   transition: all 200ms;
 
   .nav-container {
+    max-width: 42px;
+    max-height: 42px;
+
     position: relative;
-    padding: 40px;
+    padding: 32px;
     background-color: #fff;
     border-radius: 32px;
     opacity: 0;
-    transition: opacity 2000ms;
+    margin-left: auto;
+    transition: max-width 800ms, max-height 500ms, opacity 400ms;
+
+    > * {
+      opacity: 0;
+    }
 
     .btn-close-nav {
       position: absolute;
@@ -112,28 +125,19 @@ function toggleMenu() {
   }
 
   &.show {
+    background-color: rgba(3, 12, 15, 0.7);
+
     .nav-container {
       opacity: 1;
+      width: 100%;
+      max-width: 100vh;
+      max-height: 100vh;
+      border-radius: 32px;
+
+      > * {
+        opacity: 1;
+      }
     }
   }
-}
-
-
-@keyframes toggle-nav {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.toggle-nav-enter-active,
-.toggle-nav-leave-active {
-  animation: 330ms toggle-nav ease-in-out;
-}
-
-.toggle-nav-leave-active {
-  animation-direction: reverse;
 }
 </style>
