@@ -5,9 +5,7 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <Header></Header>
-  <div class="G-container" style="padding-top: 100px; padding-bottom: 100px;">
-    <router-view/>
-  </div>
+  <router-view/>
   <Footer></Footer>
 </template>
 

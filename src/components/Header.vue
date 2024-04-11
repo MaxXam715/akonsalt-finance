@@ -2,13 +2,26 @@
 import MobileNav from "./MobileNav.vue";
 import LogoImg from "../assets/img/logo.svg"
 import {phoneNumber} from "../js/Helpers.js";
+import {ref} from "vue";
 
 const phone = import.meta.env.VITE_PHONE;
 const phoneMask = phoneNumber(phone);
+const isScrolled = ref(false);
+
+
+window.addEventListener('scroll', handleScroll);
+
+function handleScroll() {
+  if (window.scrollY > 20) {
+    isScrolled.value = true; // добавьте класс isScrolled к <header>
+  } else {
+    isScrolled.value = false; // удалите класс isScrolled из <header>
+  }
+}
 </script>
 
 <template>
-  <header class="G-header">
+  <header class="G-header" :class="{ 'is-scrolled': isScrolled }">
     <div class="G-container">
       <div class="col-logo">
         <router-link to="/">
@@ -35,14 +48,23 @@ const phoneMask = phoneNumber(phone);
 
 <style lang="scss" scoped>
 .G-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
+  width: 100%;
   height: 110px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  transition: all 200ms;
+
+  &.is-scrolled {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
 
   .G-container {
     display: flex;
