@@ -56,6 +56,7 @@
 
     &:hover {
       border-color: rgba(228, 229, 232, 0.3);
+
       &::after {
         opacity: 1;
         width: 80%;
@@ -107,11 +108,36 @@
     aspect-ratio: 1 / 1;
     border-radius: 100px;
   }
+
+  @media (max-width: 767px) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: 700;
+}
+
+h1 {
+
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 110%; /* 52.8px */
+
+  @media (max-width: 1300px) {
+    font-size: 36px;
+  }
+  @media (max-width: 767px) {
+    font-size: 36px;
+  }
+}
+
+h3 {
+
 }
 
 .heading-gradient {

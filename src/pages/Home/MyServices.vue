@@ -1,56 +1,97 @@
 <script setup>
+import {ref} from "vue";
+
+const myServices = ref([
+    {
+      id: 1,
+      title: "Разработка индивидуального финансового плана",
+      desc: "Консультант помогает клиентам определить финансовые цели, составить бюджет и разработать стратегию достижения поставленных целей",
+      img: "/src/assets/img/services/service-1.jpg"
+    },
+    {
+      id: 2,
+      title: "Финансовое планирование",
+      desc: "Консультант 2 помогает 2 клиентам 2 определить финансовые цели, составить бюджет и разработать стратегию достижения поставленных целей",
+      img: "/src/assets/img/services/service-2.jpg"
+    },
+    {
+      id: 3,
+      title: "Финансовое консультирование предпринимателей",
+      desc: "Консультант 3 помогает 3 клиентам 3 определить финансовые цели, составить бюджет и разработать стратегию достижения поставленных целей",
+      img: "/src/assets/img/services/service-3.jpg"
+    },
+    {
+      id: 4,
+      title: "Управление рисками",
+      desc: "Консультант 4 помогает 4 клиентам 4 определить финансовые цели, составить бюджет и разработать стратегию достижения поставленных целей",
+      img: "/src/assets/img/services/service-4.jpg"
+    },
+    {
+      id: 5,
+      title: "Страхование",
+      desc: "Консультант 5 помогает 5 клиентам 5 определить финансовые цели, составить бюджет и разработать стратегию достижения поставленных целей",
+      img: "/src/assets/img/services/service-5.jpg"
+    },
+    {
+      id: 6,
+      title: "Кредитное консультирование",
+      desc: "Консультант 6 помогает 6 клиентам 6 определить финансовые цели, составить бюджет и разработать стратегию достижения поставленных целей",
+      img: "/src/assets/img/services/service-6.jpg"
+    }
+])
 
 </script>
 
 <template>
-<section class="my-services">
-  <div class="G-container">
-    <div class="header">
-      <h2 class="title-heading">Какие услуги я осуществляю?</h2>
-      <span class="desc">Полный комплекс услуг любой сложности: <br> от консалтинга и обучения, до интеграций решений стартапов в бизнес, а также оказываем профессиональную помощь на всех этапах сотрудничества</span>
-    </div>
+  <section class="section-container my-services">
+    <div class="G-container">
 
-    <div class="list-my-services">
-      <div class="item">
-        <div class="img-preview">
-          <img src="/src/assets/img/my-photo-2.jpg" class="photo" />
-        </div>
-        <div class="text-preview">
-          <h3 class="title">Финансовое планирование</h3>
-          <div class="desc-preview">
-            <p class="desc">Консультант помогает клиентам определить финансовые цели, составить бюджет и разработать стратегию достижения поставленных целей</p>
-            <button type="button" class="btn btn-primary">Заказать услугу</button>
+      <div class="header">
+        <h2 class="title-heading">Какие услуги я осуществляю?</h2>
+        <span class="desc">Полный комплекс услуг любой сложности: <br> от консалтинга и обучения, до интеграций решений стартапов в бизнес, а также оказываем профессиональную помощь на всех этапах сотрудничества</span>
+      </div>
+
+      <div class="list-my-services">
+        <div class="item" v-for="service in myServices">
+          <div class="img-preview">
+            <img :src="service.img" class="photo"/>
+          </div>
+          <div class="text-preview">
+            <h3 class="title">{{ service.title }}</h3>
+            <div class="desc-preview">
+              <p class="desc">{{ service.desc }}</p>
+              <button type="button" class="btn btn-primary">Заказать услугу</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </div>
-</section>
+      <div class="action-block">
+        <router-link to="/my-services" class="btn btn-primary">Смотреть все услуги</router-link>
+      </div>
+
+    </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
 .my-services {
-  border-radius: 30px;
   background: var(--Green-gradient, linear-gradient(128deg, #0D131C 0.13%, #0D131C 37.49%, #0D232E 62.14%, #08303D 80.04%, #103B49 91.98%, #031E27 107.11%));
   margin-top: -30px;
-  padding: 100px 0;
 
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-gap: 50px;
+    flex-wrap: wrap;
+    grid-gap: 40px;
     margin-bottom: 50px;
+
 
     .title-heading {
       width: 100%;
       max-width: 450px;
-
       color: var(--Gray-1);
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 110%; /* 52.8px */
     }
 
     .desc {
@@ -62,26 +103,39 @@
       font-weight: 500;
       line-height: 140%; /* 25.2px */
     }
+
+    @media (max-width: 767px) {
+      grid-gap: 20px;
+
+      .desc {
+        font-size: 16px;
+      }
+    }
   }
 
   .list-my-services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
     grid-column-gap: 24px;
     grid-row-gap: 40px;
 
     .item {
+      position: relative;
       display: flex;
       flex-direction: column;
       width: 100%;
       aspect-ratio: 500 / 430;
       border-radius: 16px;
       background: #131A20;
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.00), 0px 0px 0px 1px rgba(244, 244, 245, 0.10), 0px 0px 0px 0px #FFF;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       overflow: hidden;
+      transition-delay: 0;
+      transition: border-color 400ms;
 
       .img-preview {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
 
@@ -96,7 +150,6 @@
         }
 
         .photo {
-          position: absolute;
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -104,19 +157,24 @@
       }
 
       .text-preview {
+        position: absolute;
+        left: 0;
+        bottom: 0;
         padding: 16px 32px 16px 32px;
+        background: #131A20;
 
         .title {
           color: #E4E4E7;
           font-size: 22px;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 120%; /* 26.4px */
         }
 
         .desc-preview {
           max-height: 0;
           opacity: 0;
-          transition: all 700ms linear;
+          transition: max-height 700ms linear, opacity 900ms;
+          transition-delay: 0s;
 
           .desc {
             color: var(--Gray-1);
@@ -134,11 +192,7 @@
       }
 
       &:hover {
-        .img-preview {
-          &:after {
-
-          }
-        }
+        border-color: rgba(255, 255, 255, 0.3);
 
         .text-preview {
           .desc-preview {
@@ -148,6 +202,18 @@
         }
       }
     }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .action-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+    margin-top: 40px;
   }
 }
 </style>

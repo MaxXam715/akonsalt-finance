@@ -125,7 +125,9 @@ function toggleMenu() {
   }
 
   &.show {
-    background-color: rgba(3, 12, 15, 0.7);
+    background-color: rgba(2, 7, 15, 0.8);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 
     .nav-container {
       opacity: 1;

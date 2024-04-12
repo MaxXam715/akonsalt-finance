@@ -3,7 +3,7 @@ import MyPhoto from "/src/assets/img/my-photo-1.jpg";
 </script>
 
 <template>
-<section class="about-me">
+<section class="about-me section-container">
   <div class="G-container">
     <div class="row-container">
       <div class="about-text">
@@ -37,8 +37,6 @@ import MyPhoto from "/src/assets/img/my-photo-1.jpg";
 
 <style scoped lang="scss">
 .about-me {
-  padding-top: 100px;
-  padding-bottom: 80px;
   border-radius: 40px 40px 0 0;
   background-color: #FFF;
 
