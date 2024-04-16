@@ -25,23 +25,25 @@ function toggleMenu() {
 
   <teleport to="#app">
     <transition>
-      <div v-if="isShow" class="mobile-menu" :class="{ 'show' : isShowClass}">
-        <div class="nav-container">
-          <button type="button" class="btn btn-outline btn-aspect btn-close-nav" @click="toggleMenu">
-            <i class="icon close"></i>
-          </button>
+      <div v-show="isShow" class="mobile-menu" :class="{ 'show' : isShowClass}">
+        <div class="nav-wrapper">
+          <div class="nav-container">
+            <button type="button" class="btn btn-outline btn-aspect btn-close-nav" @click="toggleMenu">
+              <i class="icon close"></i>
+            </button>
 
-          <router-link to="/" class="logo-container" @click="toggleMenu">
-            <img :src="LogoNew" alt="logo">
-          </router-link>
-          <nav class="nav-wrapper">
-            <router-link to="/about" class="item" @click="toggleMenu">Обо мне</router-link>
-            <router-link to="/cases" class="item" @click="toggleMenu">Кейсы</router-link>
-            <router-link to="/services" class="item" @click="toggleMenu">Услуги</router-link>
-            <router-link to="/blog" class="item" @click="toggleMenu">Блог</router-link>
-            <router-link to="/contacts" class="item" @click="toggleMenu">Контакты</router-link>
-          </nav>
-          <a :href="'tel:' + phoneMask" class="btn btn-outline btn-shadow btn-call">{{ phoneMask }}</a>
+            <router-link to="/" class="logo-container" @click="toggleMenu">
+              <img :src="LogoNew" alt="logo">
+            </router-link>
+            <nav class="nav-wrapper">
+              <router-link to="/about" class="item" @click="toggleMenu">Обо мне</router-link>
+              <router-link to="/cases" class="item" @click="toggleMenu">Кейсы</router-link>
+              <router-link to="/services" class="item" @click="toggleMenu">Услуги</router-link>
+              <router-link to="/blog" class="item" @click="toggleMenu">Блог</router-link>
+              <router-link to="/contacts" class="item" @click="toggleMenu">Контакты</router-link>
+            </nav>
+            <a :href="'tel:' + phoneMask" class="btn btn-outline btn-shadow btn-call">{{ phoneMask }}</a>
+          </div>
         </div>
       </div>
     </transition>

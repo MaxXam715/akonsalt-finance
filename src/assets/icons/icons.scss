@@ -27,4 +27,14 @@
         mask-image: url(./close.svg);
         -webkit-mask-image: url(./close.svg);
     }
+
+    &.relevance {
+        mask-image: url(./relevance.svg);
+        -webkit-mask-image: url(./relevance.svg);
+    }
+
+    &.arrow-right {
+        mask-image: url(./arrow-right.svg);
+        -webkit-mask-image: url(./arrow-right.svg);
+    }
 }

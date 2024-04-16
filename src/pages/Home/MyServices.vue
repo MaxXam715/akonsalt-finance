@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import FeedbackConsultation from "./FeedbackConsultation.vue";
 
 const myServices = ref([
     {
@@ -70,12 +71,16 @@ const myServices = ref([
         <router-link to="/my-services" class="btn btn-primary">Смотреть все услуги</router-link>
       </div>
 
+      <FeedbackConsultation />
+
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
 .my-services {
+  position: relative;
+  z-index: 2;
   background: var(--Green-gradient, linear-gradient(128deg, #0D131C 0.13%, #0D131C 37.49%, #0D232E 62.14%, #08303D 80.04%, #103B49 91.98%, #031E27 107.11%));
   margin-top: -30px;
 
@@ -91,6 +96,7 @@ const myServices = ref([
     .title-heading {
       width: 100%;
       max-width: 450px;
+      line-height: 110%;
       color: var(--Gray-1);
     }
 
@@ -129,7 +135,7 @@ const myServices = ref([
       background: #131A20;
       border: 1px solid rgba(255, 255, 255, 0.1);
       overflow: hidden;
-      transition-delay: 0;
+      transition-delay: 0s;
       transition: border-color 400ms;
 
       .img-preview {
@@ -146,7 +152,7 @@ const myServices = ref([
           left: 0;
           width: 100%;
           height: 100%;
-          box-shadow: 0px -15px 20px 0px #131A20 inset, 0px -50px 100px 0px #131D24 inset;
+          //box-shadow: 0px -15px 20px 0px #131A20 inset, 0px -50px 100px 0px #131D24 inset;
         }
 
         .photo {
@@ -160,8 +166,40 @@ const myServices = ref([
         position: absolute;
         left: 0;
         bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
         padding: 16px 32px 16px 32px;
-        background: #131A20;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(359deg, #131D24 0.9%, #131D24 22.14%, rgba(19, 29, 36, 0.71) 29.6%, rgba(19, 29, 36, 0.00) 38.89%);
+          transition: all 300ms;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          background: linear-gradient(359deg, #131D24 0.9%, #131D24 22.14%, rgba(19, 29, 36, 0.71) 100%, rgba(19, 29, 36, 0.00) 38.89%);
+          transition: all 300ms;
+        }
+
+        > * {
+          position: relative;
+          z-index: 2;
+        }
 
         .title {
           color: #E4E4E7;
@@ -197,6 +235,10 @@ const myServices = ref([
         .text-preview {
           .desc-preview {
             max-height: 500px;
+            opacity: 1;
+          }
+
+          &:before {
             opacity: 1;
           }
         }
