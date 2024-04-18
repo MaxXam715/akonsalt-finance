@@ -1,30 +1,60 @@
 <script setup>
 import {ref} from "vue";
 
-const isShowClass = ref(false);
+const arrayFAQ = [
+  {
+    question: "Что делает инвестиционный советник?",
+    answer: "Предоставляю актуальные и своевременные финансовые рекомендации и аналитику",
+  },
+  {
+    question: "Что делает финансовый консультант?",
+    answer: "Предоставляю актуальные и своевременные финансовые рекомендации и аналитику",
+  },
+  {
+    question: "Сколько денег я смогу получать пассивно?",
+    answer: "Предоставляю актуальные и своевременные финансовые рекомендации и аналитику",
+  },
+  {
+    question: "Сколько денег нужно, чтобы начать инвестировать?",
+    answer: "Предоставляю актуальные и своевременные финансовые рекомендации и аналитику",
+  },
+  {
+    question: "Где торговать зарубежными акциями?",
+    answer: "Предоставляю актуальные и своевременные финансовые рекомендации и аналитику",
+  }
+]
 
-function toggleFaq() {
-  requestAnimationFrame( () => {
-    isShowClass.value = !isShowClass.value;
-  });
+const isShow = ref(null);
+function toggleFaq(index) {
+  isShow.value = isShow.value === index ? null : index;
 }
 </script>
 
 <template>
   <div class="faq-container">
-    <h2 class="title-block">Часто задаваемые вопросы</h2>
+    <h3 class="title-block">Часто задаваемые вопросы</h3>
     <span class="desc-block">Постарался ответить на все вопросы, которые чаще всего задают</span>
     <div class="grid-container">
       <div class="col-letter">
         <span class="question">?</span>
       </div>
       <div class="col-questions">
-        <div class="item" :class="{ 'show' : isShowClass}">
-          <span class="title" @click="toggleFaq">Что делает финансовый советник?</span>
-          <div class="answer-container">
-            <span class="desc">Даёт советы по финансам анализируя финансовое положение клиента, включая доходы, расходы, активы и обязательства.</span>
-          </div>
+
+        <div
+            v-for="(faq, index) in arrayFAQ"
+            :key="index"
+            class="item"
+            :class="{'show': isShow}"
+        >
+          <span class="title" @click="toggleFaq(index)">{{ faq.question }}</span>
+          <transition name="show">
+            <div v-if="isShow === index" class="answer-container">
+              <span class="desc">{{ faq.answer }}</span>
+            </div>
+          </transition>
         </div>
+
+
       </div>
     </div>
   </div>
@@ -90,7 +120,7 @@ function toggleFaq() {
             -webkit-mask-position: center;
             font-size: 16px;
             background-color: var(--Gray-1);
-            transition: all 400ms;
+            transition: all 200ms;
 
             mask-image: url(./../assets/icons/arrow-right.svg);
             -webkit-mask-image: url(./../assets/icons/arrow-right.svg);
@@ -99,29 +129,36 @@ function toggleFaq() {
 
         .answer-container {
           padding: 0 15px;
-          max-height: 0px;
-          opacity: 0;
+          max-height: 500px;
+          opacity: 1;
           overflow: hidden;
-          transition: all 400ms;
+          transition: max-height 1200ms, opacity 1200ms;
+
 
           .desc {
             color: var(--Gray-1);
             font-weight: 500;
             line-height: 150%;
+            padding-bottom: 20px;
+          }
+
+          &.show-enter-active,
+          &.show-leave-active {
+          }
+
+          &.show-enter-from,
+          &.show-leave-to {
+            max-height: 0;
+            opacity: 0;
+            transition-delay: -600ms;
           }
         }
 
         &.show {
-          padding-bottom: 20px;
-
           .title {
             &:after {
-              transform: translateY(-50%) rotate(-90deg);
+              transform: translateY(-50%) rotate(90deg);
             }
-          }
-          .answer-container {
-            opacity: 1;
-            max-height: 500px;
           }
         }
       }

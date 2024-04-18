@@ -15,7 +15,7 @@ const currentYear = new Date().getFullYear();
     <div class="G-container">
       <div class="top-line"></div>
       <div class="text-block">
-        <h2 class="heading heading-gradient">Контакты</h2>
+        <h3 class="heading heading-gradient">Контакты</h3>
         <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.</p>
       </div>
       <div class="row-events">

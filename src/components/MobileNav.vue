@@ -7,14 +7,8 @@ const phone = import.meta.env.VITE_PHONE;
 const phoneMask = phoneNumber(phone);
 
 const isShow = ref(false);
-const isShowClass = ref(false);
-
 function toggleMenu() {
   isShow.value = !isShow.value;
-
-  requestAnimationFrame( () => {
-    isShowClass.value = !isShowClass.value;
-  });
 }
 </script>
 
@@ -24,13 +18,13 @@ function toggleMenu() {
   </button>
 
   <teleport to="#app">
-    <transition>
-      <div v-show="isShow" class="mobile-menu" :class="{ 'show' : isShowClass}">
+    <transition name="fade">
+      <div v-if="isShow" class="mobile-menu" :class="{'show': isShow}">
         <div class="nav-wrapper">
+          <button type="button" class="btn btn-outline btn-aspect btn-close-nav" @click="toggleMenu">
+            <i class="icon close"></i>
+          </button>
           <div class="nav-container">
-            <button type="button" class="btn btn-outline btn-aspect btn-close-nav" @click="toggleMenu">
-              <i class="icon close"></i>
-            </button>
 
             <router-link to="/" class="logo-container" @click="toggleMenu">
               <img :src="LogoNew" alt="logo">
@@ -74,33 +68,31 @@ function toggleMenu() {
   padding: 16px;
   transition: all 200ms;
 
-  .nav-container {
-    max-width: 42px;
-    max-height: 42px;
-
+  > .nav-wrapper {
     position: relative;
     padding: 32px;
     background-color: #fff;
     border-radius: 32px;
-    opacity: 0;
     margin-left: auto;
-    transition: max-width 800ms, max-height 500ms, opacity 400ms;
+    max-width: 42px;
+    max-height: 42px;
+  }
 
-    > * {
-      opacity: 0;
+  .btn-close-nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 48px;
+    border: 1px solid #ccc;
+
+    .icon {
+      font-size: 12px;
     }
+  }
 
-    .btn-close-nav {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 48px;
-      border: 1px solid #ccc;
-
-      .icon {
-        font-size: 12px;
-      }
-    }
+  .nav-container {
+    opacity: 0;
+    transform: translateY(-20px);
 
     .logo-container {
       margin-bottom: 40px;
@@ -131,17 +123,40 @@ function toggleMenu() {
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
 
-    .nav-container {
-      opacity: 1;
-      width: 100%;
-      max-width: 100vh;
-      max-height: 100vh;
-      border-radius: 32px;
+    .nav-wrapper {
+      animation: showNavWrapper 1000ms ease forwards;
 
-      > * {
-        opacity: 1;
+      .nav-container {
+        animation: showNav 700ms ease forwards;
+        animation-delay: 250ms;
       }
     }
   }
+
+  &.fade-enter-active,
+  &.fade-leave-active {
+    transition: opacity 400ms ease;
+  }
+
+  &.fade-enter-from,
+  &.fade-leave-to {
+    opacity: 0;
+  }
 }
+
+@keyframes showNavWrapper {
+  to {
+    max-width: 100vh;
+    max-height: 100vh;
+  }
+}
+
+@keyframes showNav {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 </style>

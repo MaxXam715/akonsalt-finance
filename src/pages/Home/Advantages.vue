@@ -11,6 +11,11 @@ const listAdvantages = [
     title: "Независимость",
     desc: "Обеспечиваю независимость в своих советах, не имея финансовых интересов в конкретных продуктах или услугах",
     icon: "relevance"
+  },
+  {
+    title: "Надежность",
+    desc: "Обеспечиваю независимость в своих советах, не имея финансовых интересов в конкретных продуктах или услугах",
+    icon: "relevance"
   }
 ];
 </script>
@@ -40,9 +45,10 @@ const listAdvantages = [
   padding-top: 160px;
 
   .list-advantages {
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    grid-gap: 140px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 70px;
     margin-top: 80px;
     margin-bottom: 100px;
 
@@ -70,6 +76,16 @@ const listAdvantages = [
         font-size: 18px;
         font-weight: 500;
         line-height: 140%;
+      }
+
+      @media (max-width: 767px) {
+        .title {
+          font-size: 28px;
+        }
+
+        .desc {
+          font-size: 16px;
+        }
       }
     }
   }

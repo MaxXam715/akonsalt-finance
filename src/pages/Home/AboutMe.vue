@@ -7,7 +7,7 @@ import MyPhoto from "/src/assets/img/my-photo-1.jpg";
   <div class="G-container">
     <div class="row-container">
       <div class="about-text">
-        <h2 class="title-heading">Меня зовут Андраник Саркисович, я независимый финансовый советник</h2>
+        <h3 class="title-heading">Меня зовут Андраник Саркисович, я независимый финансовый советник</h3>
         <div class="my-skills">
           <div class="item">
             <span class="title">Профессионал</span>
