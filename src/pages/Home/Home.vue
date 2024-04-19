@@ -4,20 +4,26 @@ import FirstScreen from "./FirstScreen.vue";
 import AboutMe from "./AboutMe.vue";
 import MyServices from "./MyServices.vue";
 import Advantages from "./Advantages.vue";
+import WhoWillBenefitServices from "./WhoWillBenefitServices.vue";
+import Blog from "./Blog.vue";
 
 export default defineComponent({
   components: {
-    MyServices,
-    AboutMe,
     FirstScreen,
-    Advantages
+    AboutMe,
+    MyServices,
+    Advantages,
+    WhoWillBenefitServices,
+    Blog
   }
 })
 </script>
 
 <template>
-  <FirstScreen />
-  <AboutMe />
-  <MyServices />
-  <Advantages />
+  <FirstScreen/>
+  <AboutMe/>
+  <MyServices/>
+  <Advantages/>
+  <WhoWillBenefitServices/>
+  <Blog/>
 </template>

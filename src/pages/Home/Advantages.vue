@@ -10,7 +10,7 @@ const listAdvantages = [
   {
     title: "Независимость",
     desc: "Обеспечиваю независимость в своих советах, не имея финансовых интересов в конкретных продуктах или услугах",
-    icon: "relevance"
+    icon: "users"
   },
   {
     title: "Надежность",
@@ -31,7 +31,7 @@ const listAdvantages = [
           <span class="desc">{{ adv.desc }}</span>
         </div>
       </div>
-      <div class="faq-wrapper">
+      <div class="faq-wrapp er">
         <FAQ/>
       </div>
     </div>

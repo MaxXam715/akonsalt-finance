@@ -37,4 +37,9 @@
         mask-image: url(./arrow-right.svg);
         -webkit-mask-image: url(./arrow-right.svg);
     }
+
+    &.users {
+        mask-image: url(./users.svg);
+        -webkit-mask-image: url(./users.svg);
+    }
 }

@@ -44,7 +44,7 @@ function toggleFaq(index) {
             v-for="(faq, index) in arrayFAQ"
             :key="index"
             class="item"
-            :class="{'show': isShow}"
+            :class="{ 'show': isShow === index }"
         >
           <span class="title" @click="toggleFaq(index)">{{ faq.question }}</span>
           <transition name="show">
@@ -72,6 +72,10 @@ function toggleFaq(index) {
     justify-content: space-between;
     margin-top: 70px;
 
+    @media (max-width: 900px) {
+      margin-top: 40px;
+    }
+
     .col-letter {
       .question {
         background: linear-gradient(135deg, #FFF 0%, #9E9EA9 100%);
@@ -84,11 +88,19 @@ function toggleFaq(index) {
         font-weight: 500;
         line-height: normal;
       }
+
+      @media (max-width: 900px) {
+        display: none;
+      }
     }
 
     .col-questions {
       width: 100%;
       max-width: 700px;
+
+      @media (max-width: 900px) {
+        max-width: 100%;
+      }
 
       .item {
         box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15) inset;
@@ -132,7 +144,7 @@ function toggleFaq(index) {
           max-height: 500px;
           opacity: 1;
           overflow: hidden;
-          transition: max-height 1200ms, opacity 1200ms;
+          transition: max-height 1200ms, opacity 900ms;
 
 
           .desc {
@@ -140,6 +152,10 @@ function toggleFaq(index) {
             font-weight: 500;
             line-height: 150%;
             padding-bottom: 20px;
+
+            @media (max-width: 900px) {
+              font-size: 14px;
+            }
           }
 
           &.show-enter-active,

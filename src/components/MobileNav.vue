@@ -36,7 +36,7 @@ function toggleMenu() {
               <router-link to="/blog" class="item" @click="toggleMenu">Блог</router-link>
               <router-link to="/contacts" class="item" @click="toggleMenu">Контакты</router-link>
             </nav>
-            <a :href="'tel:' + phoneMask" class="btn btn-outline btn-shadow btn-call">{{ phoneMask }}</a>
+            <a :href="'tel:' + phoneMask" class="btn btn-primary btn-call">{{ phoneMask }}</a>
           </div>
         </div>
       </div>
@@ -95,6 +95,7 @@ function toggleMenu() {
     transform: translateY(-20px);
 
     .logo-container {
+      width: max-content;
       margin-bottom: 40px;
     }
 
@@ -114,7 +115,6 @@ function toggleMenu() {
     .btn-call {
       width: 100%;
       border-color: #E4E5E8;
-      color: var(--Black);
     }
   }
 
