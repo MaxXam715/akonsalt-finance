@@ -1,0 +1,55 @@
+section.my-advantages {
+    background-color: #fff;
+    margin-top: -60px;
+    padding-top: 160px;
+}
+
+section.my-advantages .list-advantages {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 70px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+section.my-advantages .list-advantages .item {
+    width: 100%;
+    padding-top: 24px;
+    border-top: 1px solid #D2D2D2;
+}
+
+section.my-advantages .list-advantages .item .icon {
+    font-size: 28px;
+}
+
+section.my-advantages .list-advantages .item .title {
+    color: var(--Black);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 110%;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+
+section.my-advantages .list-advantages .item .desc {
+    max-width: 430px;
+    color: var(--Gray-1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+@media (max-width: 767px) {
+    section.my-advantages .list-advantages .item .title {
+        font-size: 28px;
+    }
+
+    section.my-advantages .list-advantages .item .desc {
+        font-size: 16px;
+    }
+}
+
+section.my-advantages .faq-wrapper {
+    padding-top: 50px;
+}

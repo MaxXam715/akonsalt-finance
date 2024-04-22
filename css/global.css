@@ -1,0 +1,51 @@
+@import "/css/variables.css";
+@import "/css/fonts.css";
+@import "/assets/icons/icons.css";
+@import "/css/uikit.css";
+@import "/css/reset.css";
+
+@import "/components/Header/Header.css";
+@import "/components/Footer/Footer.css";
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #000;
+}
+
+.G-container {
+    width: 100%;
+    max-width: calc(1560px + 200px);
+    margin: 0 auto;
+    padding: 0 100px;
+    transition: max-width 200ms, padding 200ms;
+}
+
+#app {
+    position: relative;
+}
+
+.section-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 30px;
+}
+
+@media (max-width: 1300px) {
+    .G-container {
+        max-width: calc(1560px + 80px);
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-container {
+        border-radius: 24px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .G-container {
+        max-width: calc(1560px + 40px);
+        padding: 0 20px;
+    }
+}
