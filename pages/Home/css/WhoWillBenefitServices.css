@@ -1,0 +1,64 @@
+.who-will-benefit-services {
+    color: #fff;
+}
+
+.who-will-benefit-services .nav-container {
+    display: flex;
+    padding: 4px;
+    grid-gap: 5px;
+    border-radius: 24px;
+    border: 1px solid #2E2E2E;
+    margin-top: 50px;
+}
+
+.who-will-benefit-services .nav-container .btn-tab {
+    width: 100%;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.who-will-benefit-services .nav-container .btn-tab:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.who-will-benefit-services .nav-container .btn-tab.active {
+    background: linear-gradient(90deg, #0696D4 0%, #046C60 100%);
+}
+
+@media (max-width: 767px) {
+    .who-will-benefit-services .nav-container {
+        overflow: auto;
+    }
+}
+
+.who-will-benefit-services .switch-content .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+    grid-gap: 24px;
+    margin-top: 50px;
+}
+
+.who-will-benefit-services .switch-content .grid-container .item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 240px;
+    border-radius: 24px;
+    border: 1px solid #2E2E2E;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+}
+
+.who-will-benefit-services .switch-content .grid-container .item .title {
+    color: #E4E4E7;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.who-will-benefit-services .switch-content .grid-container .item .image {
+    width: auto;
+    height: 100px;
+    margin-left: auto;
+}

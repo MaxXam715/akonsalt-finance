@@ -1,0 +1,73 @@
+section.blog .header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+section.blog .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+    grid-gap: 24px;
+}
+
+@media (max-width: 767px) {
+    section.blog .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+section.blog .grid-container .blog-article {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background: rgba(24, 24, 27, 0.5);
+    padding-bottom: 32px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px 1px rgba(244, 244, 245, 0.1), 0px 0px 0px 0px #FFF;
+    cursor: pointer;
+}
+
+section.blog .grid-container .blog-article .img-preview {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.5460122699;
+    overflow: hidden;
+}
+
+section.blog .grid-container .blog-article .img-preview .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.blog .grid-container .blog-article .img-preview:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.blog .grid-container .blog-article .desc-container {
+    padding: 0 32px;
+    margin-top: 16px;
+}
+
+section.blog .grid-container .blog-article .desc-container .title {
+    color: #E4E4E7;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 120%;
+    /* 26.4px */
+    margin-bottom: 16px;
+}
+
+section.blog .grid-container .blog-article .desc-container .desc {
+    color: var(--Gray-1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+}
