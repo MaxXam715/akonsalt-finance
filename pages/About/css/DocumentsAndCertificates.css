@@ -1,0 +1,92 @@
+.documents-and-certificates {
+    color: #fff;
+}
+
+.documents-and-certificates .nav-container {
+    display: flex;
+    padding: 4px;
+    grid-gap: 5px;
+    border-radius: 24px;
+    border: 1px solid #2E2E2E;
+    margin-top: 50px;
+}
+
+.documents-and-certificates .nav-container .btn-tab {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.documents-and-certificates .nav-container .btn-tab:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.documents-and-certificates .nav-container .btn-tab.active {
+    background: linear-gradient(90deg, #0696D4 0%, #046C60 100%);
+}
+
+.documents-and-certificates .switch-content .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    margin-top: 50px;
+}
+
+.documents-and-certificates .switch-content .grid-container .item {
+    border-radius: 16px;
+    background: rgba(24, 24, 27, 0.50);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.00), 0px 0px 0px 1px rgba(244, 244, 245, 0.10), 0px 0px 0px 0px #FFF;
+    overflow: hidden;
+}
+
+.documents-and-certificates .switch-content .grid-container .item .preview-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 608 / 433;
+    cursor: pointer;
+}
+
+.documents-and-certificates .switch-content .grid-container .item .preview-photo:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #0C0C0D 0%, rgba(12, 12, 13, 0.97) 3.29%, rgba(12, 12, 13, 0.91) 7.52%, rgba(12, 12, 13, 0.77) 12.3%, rgba(12, 12, 13, 0.00) 30.08%);
+}
+
+.documents-and-certificates .switch-content .grid-container .item .preview-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.documents-and-certificates .switch-content .grid-container .item .footer {
+    padding: 16px 32px 32px;
+}
+
+.documents-and-certificates .switch-content .grid-container .item .footer .title {
+    color: #E4E4E7;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 120%; /* 26.4px */
+}
+
+
+@media (max-width: 767px) {
+    .documents-and-certificates .nav-container {
+        overflow: auto;
+    }
+
+    .documents-and-certificates .switch-content .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .documents-and-certificates .switch-content .grid-container .item .footer .title {
+        font-size: 18px;
+    }
+}

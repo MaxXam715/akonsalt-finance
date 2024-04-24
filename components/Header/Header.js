@@ -32,7 +32,7 @@ export default function Header() {
 
     // при скроле добавляем класс <header>
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 20) {
+        if (window.scrollY > 0) {
             headerHTML.classList.add("is-scrolled");
         } else {
             headerHTML.classList.remove("is-scrolled");

@@ -15,7 +15,7 @@ export default function Footer() {
             <a href="https://t.me/${global_phone}" target="_blank" class="btn btn-outline">Telegram</a>
             <a href="https://wa.me/${global_phone}" target="_blank" class="btn btn-outline">WhatsApp</a>
             <a href="'tel:${phoneMask}" class="btn btn-outline">${phoneMask}</a>
-            <button type="button" class="btn btn-primary">Заказать звонок</button>
+            <button type="button" class="btn btn-primary js-open-feedback">Заказать звонок</button>
         </div>
         <div class="cooperate-container">
             <div class="user-info">
@@ -31,4 +31,6 @@ export default function Footer() {
         </div>
     </div>`;
     document.querySelector("#app").after(footerHTML);
+
+    footerHTML.querySelector(".js-open-feedback").addEventListener("click", openModalFeedback);
 }

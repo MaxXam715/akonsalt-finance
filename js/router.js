@@ -21,6 +21,14 @@ function getPage() {
         page = "Home";
     } else if (paths.length === 2 && paths[1] === "blog") {
         page = "Blog";
+    } else if (paths.length === 2 && paths[1] === "about") {
+        page = "About";
+    } else if (paths.length === 3 && paths[2] === "article") {
+        page = "Article";
+    } else if (paths.length === 2 && paths[1] === "privacy-policy") {
+        page = "Privacy-policy";
+    } else if (paths.length === 2 && paths[1] === "services") {
+        page = "Services";
     } else {
         page = "404";
     }

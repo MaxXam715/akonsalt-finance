@@ -27,9 +27,11 @@ export default function AboutMe() {
             </div>
         </div>
         <div class="action-block">
-            <button type="button" class="btn btn-primary">Записаться на консультацию</button>
-            <button type="button" class="btn btn-outline btn-shadow">Подробнее обо мне</button>
+            <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
+            <a href="/about" class="btn btn-outline btn-shadow">Подробнее обо мне</a>
         </div>
     </div>`;
     document.querySelector("#app").append(html);
+
+    html.querySelector(".js-open-feedback").addEventListener("click", openModalFeedback);
 }

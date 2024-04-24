@@ -13,6 +13,7 @@
 
 .who-will-benefit-services .nav-container .btn-tab {
     width: 100%;
+    border: none;
     border-radius: 20px;
     background-color: transparent;
     color: #fff;

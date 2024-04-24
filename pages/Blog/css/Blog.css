@@ -145,4 +145,8 @@ section.blog .blog-list .article-item .row-container .text-preview .date-create 
         margin-top: 20px;
         text-align: right;
     }
+
+    section.blog .blog-list .article-item .row-container .image-wrapper {
+        width: 100%;
+    }
 }

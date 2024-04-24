@@ -10,8 +10,8 @@ export default function FirstScreen() {
                 <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.</p>
             </div>
             <div class="row-action">
-                <button type="button" class="btn btn-primary">Записаться на консультацию</button>
-                <button type="button" class="btn btn-outline btn-shadow">Заказать услугу</button>
+                <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
+                <a href="/services" class="btn btn-outline btn-shadow">Заказать услугу</a>
             </div>
         </div>
     </div>
@@ -21,4 +21,6 @@ export default function FirstScreen() {
         </video>
     </div>`;
     document.querySelector("#app").append(html);
+
+    html.querySelector(".js-open-feedback").addEventListener("click", openModalFeedback);
 }

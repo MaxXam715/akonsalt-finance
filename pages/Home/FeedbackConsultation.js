@@ -1,4 +1,8 @@
+import FormFields from "/plugins/form-fields/form-fields.js";
+
 export default function FeedbackConsultation() {
+    var formFields = new FormFields();
+
     var html = document.createElement("div");
     html.classList.add("feedback-consultation");
     html.innerHTML = `
@@ -7,11 +11,24 @@ export default function FeedbackConsultation() {
         <h3 class="title-form">Нужна профессиональная консультация?</h3>
         <span class="desc-form">Заполните форму, наши эксперты свяжутся с вами в течение дня и ответят на все возникшие вопросы</span>
         <form>
-            <InputField type="text" placeholder="Ваше имя" />
-            <InputField type="text" placeholder="Телефон" />
-            <button type="button" class="btn btn-outline btn-shadow">Отправить</button>
+            <button type="button" class="btn btn-outline btn-shadow btn-send-request">Отправить</button>
         </form>
     </div>`;
+
+    const form = html.querySelector("form");
+
+    form.prepend(
+        formFields.inputText({label: "", name: "name", placeholder: "Имя", validate: "true"}),
+        formFields.inputText({label: "", name: "phone", placeholder: "Телефон", mask: "phone", validate: "true"})
+    )
+
+    html.querySelector(".btn-send-request").addEventListener("click", function () {
+        var getValuesForm = formFields.getValuesForm(form);
+
+        if (getValuesForm.error) return false;
+
+        console.log("getValuesForm", getValuesForm)
+    });
 
     return html;
 }

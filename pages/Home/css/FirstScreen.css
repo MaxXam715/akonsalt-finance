@@ -131,6 +131,12 @@
     opacity: 0.3;
 }
 
+.section-promo .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .section-promo .video-container:after {
     content: "";
     position: absolute;

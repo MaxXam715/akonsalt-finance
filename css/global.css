@@ -2,11 +2,14 @@
 @import "/css/fonts.css";
 @import "/assets/icons/icons.css";
 @import "/css/uikit.css";
+@import "/plugins/fancybox/fancybox.css";
+@import "/plugins/modal/modal.css";
 @import "/css/reset.css";
 
 @import "/components/Header/Header.css";
 @import "/components/MobileNav/MobileNav.css";
 @import "/components/Footer/Footer.css";
+@import "/components/modal/Feedback/Feedback.css";
 
 body {
     font-family: "Inter", sans-serif;

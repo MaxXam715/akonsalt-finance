@@ -36,6 +36,7 @@ export default function Blog() {
 
     function itemArticle(article) {
         var articleHTML = document.createElement("a");
+        articleHTML.setAttribute("href", "/blog/article?id=1");
         articleHTML.classList.add("blog-article");
         articleHTML.innerHTML = `
         <div class="img-preview">

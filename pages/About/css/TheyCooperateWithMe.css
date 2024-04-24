@@ -1,0 +1,43 @@
+.they-cooperate-with-me {
+    display: flex;
+    background-color: #fff;
+}
+
+.they-cooperate-with-me .header {
+    margin-bottom: 80px;
+}
+
+.they-cooperate-with-me .header .title-heading {
+    margin-bottom: 24px;
+}
+
+.they-cooperate-with-me .header .desc {
+    color: var(--Gray-1);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+
+
+.they-cooperate-with-me .list-banks {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: 12%;
+    grid-row-gap: 30px;
+    margin-bottom: 140px;
+}
+
+.they-cooperate-with-me .list-banks .item {
+
+}
+
+.they-cooperate-with-me .list-banks .item img {
+
+}
+
+@media (max-width: 767px) {
+    .they-cooperate-with-me .list-banks .item img {
+        width: 70%;
+    }
+}

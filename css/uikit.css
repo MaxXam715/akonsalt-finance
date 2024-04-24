@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+@import "./form-fields.css";
+
 .btn {
     position: relative;
     width: max-content;
@@ -143,9 +146,9 @@ h3 {
 }
 
 @media (max-width: 767px) {
-    h3 {
-        font-size: 28px;
-    }
+    /*h3 {*/
+    /*    font-size: 28px;*/
+    /*}*/
 }
 
 .heading-gradient {
@@ -160,27 +163,4 @@ h3 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-form .field-container {
-    flex: 1;
-}
-
-form .field-container[type="input-text"] .field-input {
-    width: 100%;
-    height: 55px;
-    color: #fff;
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0 24px;
-    background-color: transparent;
-    transition: border-color 200ms;
-}
-
-form .field-container[type="input-text"] .field-input:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-form .field-container[type="input-text"] .field-input:focus {
-    border-color: rgba(255, 255, 255, 0.5);
 }
