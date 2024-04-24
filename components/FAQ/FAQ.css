@@ -75,7 +75,7 @@
     -webkit-mask-position: center;
     font-size: 16px;
     background-color: var(--Gray-1);
-    transition: all 200ms;
+    transition: all 150ms linear;
     mask-image: url(/assets/icons/arrow-right.svg);
     -webkit-mask-image: url(/assets/icons/arrow-right.svg);
 }
@@ -85,7 +85,7 @@
     max-height: 0;
     opacity: 1;
     overflow: hidden;
-    transition: all 900ms;
+    transition: max-height 150ms linear;
 }
 
 .faq-container .grid-container .col-questions .item .answer-container .desc {
@@ -101,10 +101,6 @@
     }
 }
 
-.faq-container .grid-container .col-questions .item.show .answer-container {
-    max-height: 500px;
-}
-
-.faq-container .grid-container .col-questions .item.show .title:after {
+.faq-container .grid-container .col-questions .item.active .title:after {
     transform: translateY(-50%) rotate(90deg);
 }

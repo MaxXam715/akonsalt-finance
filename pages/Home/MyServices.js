@@ -12,7 +12,7 @@ export default function MyServices() {
         </div>
         <div class="list-my-services"></div>
         <div class="action-block">
-            <router-link to="/my-services" class="btn btn-primary">Смотреть все услуги</router-link>
+            <a href="/my-services" class="btn btn-primary">Смотреть все услуги</a>
         </div>
     </div>`;
     document.querySelector("#app").append(html);

@@ -40,6 +40,12 @@
     margin-top: 50px;
 }
 
+@media (max-width: 767px) {
+    .who-will-benefit-services .switch-content .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 .who-will-benefit-services .switch-content .grid-container .item {
     display: flex;
     justify-content: space-between;

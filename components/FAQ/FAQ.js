@@ -40,11 +40,29 @@ export default function FAQ() {
         itemQuestion(arrayFAQ[i]);
     }
 
-    var allQuestion = html.querySelectorAll(".col-questions .item");
+    var allQuestions = html.querySelectorAll(".col-questions .item");
+    allQuestions.forEach(function (question) {
+        question.querySelector(".title").addEventListener("click", function () {
 
-    allQuestion.forEach( function (question) {
-        question.addEventListener("click", function () {
-            this.classList.toggle("show");
+            // Удаляем активный класс у всех элементов, кроме текущего
+            allQuestions.forEach(function (item) {
+                if (item !== question) {
+                    item.classList.remove("active");
+                    var panel = item.querySelector(".answer-container");
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    }
+                }
+            });
+
+            this.closest(".item").classList.toggle("active");
+            var panel = this.nextElementSibling;
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
         });
     });
 

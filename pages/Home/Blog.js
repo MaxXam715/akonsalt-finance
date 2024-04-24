@@ -6,7 +6,7 @@ export default function Blog() {
     <div class="G-container">
         <div class="header-section">
             <h3 class="heading heading-gradient">Блог</h3>
-            <router-link to="/blog" class="btn btn-outline btn-shadow">Смотреть все</router-link>
+            <a href="/blog" class="btn btn-outline btn-shadow">Смотреть все</a>
         </div>
         <div class="grid-container"></div>
     </div>`;

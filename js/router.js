@@ -19,6 +19,8 @@ function initCarcass() {
 function getPage() {
     if (pathname === "/") {
         page = "Home";
+    } else if (paths.length === 2 && paths[1] === "blog") {
+        page = "Blog";
     } else {
         page = "404";
     }
