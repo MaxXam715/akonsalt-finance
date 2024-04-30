@@ -43,3 +43,8 @@
     mask-image: url(./users.svg);
     -webkit-mask-image: url(./users.svg);
 }
+
+.icon.star {
+    mask-image: url(./star.svg);
+    -webkit-mask-image: url(./star.svg);
+}

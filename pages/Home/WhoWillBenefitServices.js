@@ -7,9 +7,9 @@ export default function WhoWillBenefitServices() {
         ],
         "content": {
             "terms-participation": [
-                {title: "Российское юридическое лицо", img: "/assets/img/WhoWillBenefitServices/terms-participation/image-1.png"},
-                {title: "Проект соответствует приоритетным направлениям", img: "/assets/img/WhoWillBenefitServices/terms-participation/image-2.png"},
-                {title: "Есть команда из двух и более человек", img: "/assets/img/WhoWillBenefitServices/terms-participation/image-3.png"}
+                {title: "Физическим лицам", img: "/assets/img/WhoWillBenefitServices/terms-participation/image-1.png"},
+                {title: "Юридическим лицам", img: "/assets/img/WhoWillBenefitServices/terms-participation/image-2.png"},
+                {title: "Start Up (новые проекты)", img: "/assets/img/WhoWillBenefitServices/terms-participation/image-3.png"}
             ],
             "stage-dev": [
                 {title: "Есть команда из двух и более человек 2", img: "/assets/img/WhoWillBenefitServices/terms-participation/image-3.png"},
@@ -30,7 +30,7 @@ export default function WhoWillBenefitServices() {
     var htmlInner = `
     <div class="G-container">
         <h3 class="title-heading heading-gradient">Кому подойдут услуги</h3>
-        <div class="nav-container">`;
+        <div class="nav-container" style="display: none">`;
             for (var i in content.tabs) {
                 var tab = content.tabs[i];
                 htmlInner += `<button type="button" class="btn btn-tab" data-tab="${tab.key}">${tab.title}</button>`;

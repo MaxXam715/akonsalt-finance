@@ -15,6 +15,11 @@
     }
 }
 
+.faq-container .grid-container .col-letter {
+    position: sticky;
+    bottom: 0;
+}
+
 .faq-container .grid-container .col-letter .question {
     background: linear-gradient(135deg, #FFF 0%, #9E9EA9 100%);
     background-clip: text;

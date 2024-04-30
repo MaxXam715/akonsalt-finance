@@ -9,14 +9,14 @@ export default function Header() {
     <div class="G-container">
         <div class="col-logo">
             <a href="/">
-                <img src="/assets/img/logo.svg" alt="logo" class="logo">
+                <img src="/assets/img/logo.svg?v=1.02" alt="logo" class="logo">
             </a>
         </div>
         <div class="col-nav">
             <nav class="nav-wrapper">
                 <a href="/about" class="item">Обо мне</a>
                 <a href="/services" class="item">Услуги</a>
-                <a href="/blog" class="item">Блог</a>
+<!--                <a href="/blog" class="item">Блог</a>-->
                 <a class="item anchor-contact">Контакты</a>
             </nav>
         </div>

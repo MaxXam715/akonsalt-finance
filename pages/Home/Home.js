@@ -11,5 +11,5 @@ export default function HomePage() {
     MyServices();
     Advantages();
     WhoWillBenefitServices();
-    Blog();
+    // Blog();
 }
