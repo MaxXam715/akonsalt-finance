@@ -31,7 +31,7 @@ jobs:
           port: ${{env.SERVER_PORT}}
           username: ${{env.SERVER_USER}}
           password: ${{env.SERVER_PASS}}
-          key: ${{secrets.KEY}}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             cd ${{env.SERVER_PATH}};
             git checkout master;
