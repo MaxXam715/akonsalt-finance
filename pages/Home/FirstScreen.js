@@ -15,10 +15,10 @@ export default function FirstScreen() {
             </div>
         </div>
         
-        <div class="official-partner">
-            <span class="title">Официальный партнёр</span>
-            <img src="/assets/img/tinkoff.svg" alt="tinkoff">
-        </div>
+<!--        <div class="official-partner">-->
+<!--            <span class="title">Официальный партнёр</span>-->
+<!--            <img src="/assets/img/tinkoff.svg" alt="tinkoff">-->
+<!--        </div>-->
     </div>
     <div class="video-container">
         <video controls="false" autoplay muted loop>

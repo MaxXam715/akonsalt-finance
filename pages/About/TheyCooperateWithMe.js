@@ -11,9 +11,9 @@ export default function TheyCooperateWithMe() {
             <span class="desc">По Указанию Банка России от 29.04.2015 N 3629-У (ред. от 17.09.2021) "О признании лиц квалифицированными инвесторами и порядке ведения реестра лиц, признанных квалифицированными инвесторами" (Зарегистрировано в Минюсте России 28.05.2015 N 37415) состою в реестрах квалифицированных инвесторов </span>
         </div>
         <div class="list-banks">
-            <div class="item">
-                <img src="/assets/img/banks/tinkoff-black.svg" alt="tinkoff">
-            </div>
+<!--            <div class="item">-->
+<!--                <img src="/assets/img/banks/tinkoff-black.svg" alt="tinkoff">-->
+<!--            </div>-->
 <!--            <div class="item">-->
 <!--                <img src="/assets/img/banks/sber.png" alt="sber">-->
 <!--            </div>-->
