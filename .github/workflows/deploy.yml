@@ -34,8 +34,9 @@ jobs:
           key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             cd ${{env.SERVER_PATH}};
+            git checkout master;
             git reset --hard
-            git pull git@github.com:MaxXam715/you-finances.git master
+            git pull origin master;
             cd backend
             
             timestamp=$(date +%s)
