@@ -243,4 +243,8 @@ section.services .payment-service .row-container .col-info .desc {
     section.services .payment-service .row-container .col-payment {
         padding: 20px;
     }
+
+    section.services .list-services .service-item .desc-container .events-footer .btn-outline {
+        display: none;
+    }
 }

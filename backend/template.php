@@ -8,7 +8,7 @@ require_once $root . '/backend/clearCash.php';
 if ($_SERVER['HTTP_HOST'] != 'you-finances.ru') {
     $version = mt_rand(10000, 99999999);
 } else {
-    $version = "1.0.114";
+    $version = "1.0.115";
 
     clearCash($root . "/assets", $version);
     clearCash($root . "/css", $version);
