@@ -31,12 +31,11 @@ jobs:
           port: ${{env.SERVER_PORT}}
           username: ${{env.SERVER_USER}}
           password: ${{env.SERVER_PASS}}
-          key: "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"
+          key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             cd ${{env.SERVER_PATH}};
-            git checkout master;
             git reset --hard
-            git pull origin master;
+            git pull git@github.com:MaxXam715/you-finances.git master
             cd backend
             
             timestamp=$(date +%s)
