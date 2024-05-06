@@ -23,14 +23,6 @@ jobs:
         with:
           node-version: '18.x'
 
-      # Login to GitHub
-      - name: "Login to GitHub Registry"
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: "MaxXam715"
-          password: "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"
-
       # Deploy
       - name: Connect on remote server and deploy
         uses: appleboy/ssh-action@v1.0.0
@@ -39,7 +31,7 @@ jobs:
           port: ${{env.SERVER_PORT}}
           username: ${{env.SERVER_USER}}
           password: ${{env.SERVER_PASS}}
-          key: ${{secrets.SSH_PRIVATE_KEY}}
+          key: "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"
           script: |
             cd ${{env.SERVER_PATH}};
             git checkout master;
