@@ -191,6 +191,7 @@ export default function Services() {
             <div class="events-footer">
                 <button type="button" class="btn btn-primary js-open-feedback">Заказать услугу</button>
                 <button type="button" class="btn btn-outline btn-shadow js-open-feedback">Консультация</button>
+                <span class="cost">40 000 ₽</span>
             </div>
         </div>`;
         html.querySelector(".list-services").append(serviceHTML);

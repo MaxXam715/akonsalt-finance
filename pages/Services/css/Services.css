@@ -89,6 +89,12 @@ section.services .list-services .service-item .desc-container .events-footer .bt
     border-color: #c7c7c9;
 }
 
+section.services .list-services .service-item .desc-container .cost {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 
 
 
