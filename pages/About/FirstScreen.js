@@ -8,7 +8,7 @@ export default function FirstScreen() {
         <div class="grid-container">
             <div class="about-me">
                 <h1 class="title-heading">Я, Андраник Саркисович</h1>
-                <p class="desc">Квалифицированный финансовый советник, состою в Федеральном реестре НОК( свидетельство 08.00800.01.00000003.27)</p>
+                <p class="desc">Квалифицированный и аккредитованный финансовый советник, состою в Федеральном реестре НОК( свидетельство 08.00800.01.00000003.27)</p>
                 <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
             </div>
             <div class="col-photo">

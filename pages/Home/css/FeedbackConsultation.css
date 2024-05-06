@@ -47,6 +47,20 @@
     height: 55px;
 }
 
+.feedback-consultation .personal-data {
+    color: #787E8C;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%; /* 16.8px */
+    margin-top: 24px;
+}
+
+.feedback-consultation .personal-data a {
+    display: inline;
+    color: inherit;
+    text-decoration: underline;
+}
+
 @media (max-width: 767px) {
     .feedback-consultation .content form {
         flex-direction: column;

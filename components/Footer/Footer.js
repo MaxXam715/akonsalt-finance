@@ -9,13 +9,14 @@ export default function Footer() {
         <div class="top-line"></div>
         <div class="text-block">
             <h3 class="heading heading-gradient">Контакты</h3>
-            <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.</p>
+<!--            <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.</p>-->
         </div>
         <div class="row-events">
             <a href="https://t.me/${global_phone}" target="_blank" class="btn btn-outline">Telegram</a>
             <a href="https://wa.me/${global_phone}" target="_blank" class="btn btn-outline">WhatsApp</a>
-            <a href="'tel:${phoneMask}" class="btn btn-outline">${phoneMask}</a>
-            <button type="button" class="btn btn-primary js-open-feedback">Заказать звонок</button>
+            <a href="mailto: ${global_email}" target="_blank" class="btn btn-outline">E-mail</a>
+            <a href="tel:${global_phone}" class="btn btn-outline">${phoneMask}</a>
+            <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
         </div>
         <div class="cooperate-container">
             <div class="user-info">
@@ -26,7 +27,7 @@ export default function Footer() {
             </div>
             <div class="tech-block">
                 <a href="/privacy-policy">Политика конфиденциальности</a>
-                <span>© ${currentYear} Все права защищены</span>
+                <span>© ${currentYear} Вся информация опубликована в информационных целях. <br> Все права защищены</span>
             </div>
         </div>
     </div>`;

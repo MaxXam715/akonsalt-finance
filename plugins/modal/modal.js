@@ -38,7 +38,6 @@ export default class Modal {
 
         // сборка
         this.template();
-        this.widthScrollBody();
         this.openModal();
         this.events();
     }
@@ -100,6 +99,7 @@ export default class Modal {
 
     // инициализация
     openModal() {
+        this.widthScrollBody();
         document.body.classList.add('no-scroll');
 
         requestAnimationFrame( () => {

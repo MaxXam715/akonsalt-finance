@@ -20,6 +20,10 @@ body {
     position: relative;
 }
 
+body.no-scroll {
+    padding-right: var(--widthScrollBar);
+}
+
 .no-scroll {
     overflow: hidden !important;
 }

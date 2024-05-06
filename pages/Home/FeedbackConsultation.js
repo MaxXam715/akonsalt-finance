@@ -13,6 +13,7 @@ export default function FeedbackConsultation() {
         <form>
             <button type="button" class="btn btn-outline btn-shadow btn-send-request">Отправить</button>
         </form>
+        <div class="personal-data">Нажимая на кнопку отправить, вы соглашаетесь с <a href="/privacy-policy" target="_blank">политикой конфиденциальности</a> и подтверждаете , что вы владелец указанного номера телефона</div>
     </div>`;
 
     const form = html.querySelector("form");

@@ -18,7 +18,7 @@ export default function AboutMe() {
                     </div>
                     <div class="item">
                         <span class="title">Советник</span>
-                        <span class="desc">Обучает клиента финансовой грамотности и помогает принимать обоснованные финансовые решения</span>
+                        <span class="desc">Разрабатывает индивидуальную стратегию развития</span>
                     </div>
                 </div>
             </div>

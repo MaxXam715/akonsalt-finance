@@ -45,6 +45,11 @@
     margin-top: 24px;
 }
 
+.modal-feedback .personal-data a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 @media (max-width: 767px) {
     .modal-feedback .header .title {
         font-size: 24px;

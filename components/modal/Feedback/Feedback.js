@@ -9,11 +9,11 @@ export default function ModalFeedback() {
     modalHTML.innerHTML = `
     <div class="header">
         <span class="title">Записаться на консультацию</span>
-        <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus</p>    
+<!--        <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus</p>    -->
     </div>
     <form>
         <button type="button" class="btn btn-primary btn-send-request">Отправить</button>
-        <div class="personal-data">Нажимая на кнопку “Связаться с нами”, вы соглашаетесь с условиями обработки личных данных</div>
+        <div class="personal-data">Нажимая на кнопку отправить, вы соглашаетесь с <a href="/privacy-policy" target="_blank">политикой конфиденциальности</a> и подтверждаете , что вы владелец указанного номера телефона</div>
     </form>`;
 
     const form = modalHTML.querySelector("form");

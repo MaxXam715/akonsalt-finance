@@ -1,0 +1,50 @@
+.G-header {
+    position: sticky;
+}
+
+.privacy-policy {
+    border-radius: 40px;
+    background: #FFF;
+}
+
+.privacy-policy .header {
+    margin-bottom: 40px;
+}
+
+.privacy-policy .text-pp {
+    max-width: 800px;
+}
+
+.privacy-policy .text-pp .block-item {
+    margin-bottom: 40px;
+}
+
+.privacy-policy .text-pp .block-item .title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.privacy-policy .text-pp .block-item p {
+
+}
+
+.privacy-policy .text-pp .block-item ul {
+    padding: 0;
+    padding-left: 30px;
+    list-style: none;
+}
+
+.privacy-policy .text-pp .block-item ul li {
+    margin-bottom: 10px;
+}
+
+.privacy-policy .text-pp .block-item ul li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .privacy-policy .header h3 {
+        font-size: 26px;
+    }
+}
