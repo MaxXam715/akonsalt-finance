@@ -1,5 +1,6 @@
 import Modal from "../../../plugins/modal/modal.js";
 import FormFields from "/plugins/form-fields/form-fields.js";
+import sendTelegram from "/js/sendTelegram.js";
 
 export default function ModalFeedback() {
     var formFields = new FormFields();
@@ -46,5 +47,8 @@ export default function ModalFeedback() {
         if (getValuesForm.error) return false;
 
         console.log("getValuesForm", getValuesForm)
+
+        sendTelegram(getValuesForm);
+
     });
 }

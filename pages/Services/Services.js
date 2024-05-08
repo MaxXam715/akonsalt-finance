@@ -79,14 +79,6 @@ export default function Services() {
         {
             title: "Консультации по личным финансовым вопросам",
             desc: "Советник будет готов ответить на любые вопросы, связанные с личными финансами, и предоставит вам профессиональные советы и рекомендации в соответствии с вашими потребностями и целями.",
-        },
-        {
-            title: "",
-            desc: "",
-        },
-        {
-            title: "",
-            desc: "",
         }
     ];
 
@@ -96,7 +88,7 @@ export default function Services() {
     html.innerHTML = `
     <div class="header">
         <div class="G-container">
-            <h3 class="title-heading">Все услуги</h3>
+            <h3 class="title-heading">Все консультационные услуги</h3>
         </div>
     </div>
     <div class="G-container">

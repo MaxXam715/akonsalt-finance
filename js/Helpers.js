@@ -45,3 +45,45 @@ function createCSSLink(path) {
 function openModalFeedback() {
     importComponent("/components/modal/Feedback/Feedback.js");
 }
+
+function XMLHttpRequestAJAX(data) {
+    var sendData = {
+        url: (data.url != undefined && data.url != "") ? data.url : "",
+        method: (data.method != undefined && data.method != "") ? data.method : "POST",
+        body: (data.body != undefined && data.body != "") ? data.body : ""
+    }
+
+    var xhr = new XMLHttpRequest();
+
+    if (sendData.method === "GET" || sendData.method === "DELETE" || sendData.method === "UPDATE") {
+        xhr.open(sendData.method, sendData.url + "?" + new URLSearchParams(sendData.body).toString(), false);
+    }
+
+    if (data.headers) {
+        for (var h in data.headers) {
+            xhr.setRequestHeader(h, data.headers[h]);
+        }
+    }
+
+    if (sendData.method === "POST") {
+        sendData.body = JSON.stringify(sendData.body);
+        xhr.open("POST", sendData.url, false);
+        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+    }
+
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.send(sendData.body);
+
+    var getData = {};
+    getData.code = xhr.status;
+
+    try {
+        getData.data = JSON.parse(xhr.responseText);
+    } catch (error) {
+        getData.data = xhr.responseText;
+    }
+
+    return getData;
+}
