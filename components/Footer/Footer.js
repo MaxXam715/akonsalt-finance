@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
         <div class="cooperate-container">
             <div class="user-info">
-                <span>ИП ${legal_IP}</span>
+                <span>Индивидуальный предприниматель</span>
                 <a href="https://nok-nark.ru/cert/list/?filter%5BCODE%5D=08.00800.01.00000003.27&filter%5BACTIVE_FROM%5D=11.01.2024&sort%5Bby%5D=CODE&sort%5Border%5D=asc" target="_blank">Федеральный реестр независимой оценки квалификации</a>
             </div>
             <div class="tech-block">

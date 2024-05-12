@@ -10,7 +10,7 @@ export default function AboutMe() {
                 <div class="my-skills">
                     <div class="item">
                         <span class="title">Профессионал</span>
-                        <span class="desc">Профессиональный участник по финансовому просвещению, состоит в Федеральном реестре НОК</span>
+                        <span class="desc">Профессиональный участник по финансовому просвещению, состоит в Федеральном реестре независимой оценки квалификации</span>
                     </div>
                     <div class="item">
                         <span class="title">Аналитик</span>

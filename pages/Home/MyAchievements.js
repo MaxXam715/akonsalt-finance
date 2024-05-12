@@ -24,7 +24,7 @@ export default function MyAchievements() {
 <!--                    <img src="/assets/img/edin-russian.png" class="logo">-->
                 </div>
                 <div class="item">
-                    <span class="title">Состою в Федеральном Реестре НОК</span>
+                    <span class="title">Состою в Федеральном Реестре независимой оценки квалификации</span>
 <!--                    <img src="/assets/img/nok.png" class="logo">-->
                 </div>
             </div>
