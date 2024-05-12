@@ -11,21 +11,21 @@ export default function MyAchievements() {
             <div class="grid-container">
                 <div class="item">
                     <span class="title">Состою в Торгово-Промышленной палате РФ</span>
-                    <img src="/assets/img/tpprf.png" class="logo">               
+<!--                    <img src="/assets/img/tpprf.png" class="logo">               -->
                 </div>
                 <div class="item">
                     <span class="title">Состою в Московской Торгово-Промышленной палате</span>
-                    <img src="/assets/img/mtpp.png" class="logo">
+<!--                    <img src="/assets/img/mtpp.png" class="logo">-->
                 </div>
             </div>
             <div class="grid-container">
                 <div class="item">
                     <span class="title">Состою в сторонниках партии Единая Россия</span>
-                    <img src="/assets/img/edin-russian.png" class="logo">
+<!--                    <img src="/assets/img/edin-russian.png" class="logo">-->
                 </div>
                 <div class="item">
                     <span class="title">Состою в Федеральном Реестре НОК</span>
-                    <img src="/assets/img/nok.png" class="logo">
+<!--                    <img src="/assets/img/nok.png" class="logo">-->
                 </div>
             </div>
         </div>

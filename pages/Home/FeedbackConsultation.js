@@ -9,7 +9,7 @@ export default function FeedbackConsultation() {
     <div class="content">
         <img src="/assets/img/my-photo-1.jpg" alt="" class="my-photo">
         <h3 class="title-form">Нужна профессиональная консультация?</h3>
-        <span class="desc-form">Заполните форму, наши эксперты свяжутся с вами в течение дня и ответят на все возникшие вопросы</span>
+<!--        <span class="desc-form">Заполните форму, наши эксперты свяжутся с вами в течение дня и ответят на все возникшие вопросы</span>-->
         <form>
             <button type="button" class="btn btn-outline btn-shadow btn-send-request">Отправить</button>
         </form>

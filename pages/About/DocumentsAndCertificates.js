@@ -8,51 +8,39 @@ export default function DocumentsAndCertificates() {
         "content": {
             "diplomas": [
                 {
-                    title: "Российское юридическое лицо",
-                    img: [
-                        "/assets/img/DocumentsAndCertificates/dip-1.png",
-                        "/assets/img/DocumentsAndCertificates/dip-1.png"
-                    ]
+                    title: "Диплом МГТУ им. Н.Э. Баумана",
+                    img: "/assets/img/DocumentsAndCertificates/dip-1.png",
+                    link: "/assets/documents/Диплом МГТУ им. Н.Э. Баумана.pdf"
                 },
                 {
-                    title: "Диплом Бакалавра",
-                    img: [
-                        "/assets/img/DocumentsAndCertificates/dip-2.png",
-                        "/assets/img/DocumentsAndCertificates/dip-2.png"
-                    ]
+                    title: "Диплом МГУТиУ им. К.Г. Разумовского",
+                    img: "/assets/img/DocumentsAndCertificates/dip-2.png",
+                    link: "/assets/documents/Диплом_МГУТиУ_им_К_Г_Разумовского.pdf"
                 },
             ],
             "certificates": [
                 {
-                    title: "Российское юридическое лицо",
-                    img: [
-                        "/assets/img/DocumentsAndCertificates/dip-1.png",
-                        "/assets/img/DocumentsAndCertificates/dip-1.png"
-                    ]
+                    title: "Удостоверение МГТУ им. Н.Э. Баумана",
+                    img: "/assets/img/DocumentsAndCertificates/cert-1.jpg",
+                    link: "/assets/documents/Удостоверение_МГТУ_им_Н_Э_Баумана.pdf"
                 },
                 {
-                    title: "Диплом Бакалавра",
-                    img: [
-                        "/assets/img/DocumentsAndCertificates/dip-2.png",
-                        "/assets/img/DocumentsAndCertificates/dip-2.png"
-                    ]
+                    title: "Удостоверение РАНХиГС Управление Государственными и Муниципальными",
+                    img: "/assets/img/DocumentsAndCertificates/cert-2.jpg",
+                    link: "/assets/documents/Удостоверение_РАНХиГС_Управление_Государственными_и_Муниципальными.pdf"
                 },
+                {
+                    title: "Удостоверение Финансового Консультанта",
+                    img: "/assets/img/DocumentsAndCertificates/cert-3.jpg",
+                    link: "/assets/documents/Удостоверение_Финансового_Консультанта.pdf"
+                }
             ],
             "evidence": [
                 {
-                    title: "Российское юридическое лицо",
-                    img: [
-                        "/assets/img/DocumentsAndCertificates/dip-1.png",
-                        "/assets/img/DocumentsAndCertificates/dip-1.png"
-                    ]
-                },
-                {
-                    title: "Диплом Бакалавра",
-                    img: [
-                        "/assets/img/DocumentsAndCertificates/dip-2.png",
-                        "/assets/img/DocumentsAndCertificates/dip-2.png"
-                    ]
-                },
+                    title: "Свидетельство о квалификации Финансовый Консультант",
+                    img: "/assets/img/DocumentsAndCertificates/evidence-1.jpg",
+                    link: "/assets/documents/Свидетельство_о_квалификации_Финансовый_Консультант.pdf"
+                }
             ]
         }
     };
@@ -103,29 +91,31 @@ export default function DocumentsAndCertificates() {
         for (var i in contents) {
             const content = contents[i];
 
-            var cardHTML = document.createElement("div");
+            var cardHTML = document.createElement("a");
+            cardHTML.setAttribute("href", content.link);
+            cardHTML.setAttribute("target", "_blank");
             cardHTML.classList.add("item");
             cardHTML.innerHTML = `
             <div class="preview-photo">
-                <img src="${content.img[0]}" class="image" />    
+                <img src="${content.img}" class="image" />    
             </div>
             <div class="footer">
                 <span class="title">Диплом о профессиональной переподготовке</span>
             </div>`;
             outputTag.append(cardHTML);
 
-            cardHTML.addEventListener("click", function () {
-                var arrayPhoto = [];
-
-                for (var i in content.img) {
-                    arrayPhoto.push({
-                        src: content.img[i],
-                        type: "image",
-                    });
-                }
-
-                const fancybox = Fancybox.show(arrayPhoto);
-            });
+            // cardHTML.addEventListener("click", function () {
+            //     var arrayPhoto = [];
+            //
+            //     for (var i in content.img) {
+            //         arrayPhoto.push({
+            //             src: content.img[i],
+            //             type: "image",
+            //         });
+            //     }
+            //
+            //     const fancybox = Fancybox.show(arrayPhoto);
+            // });
         }
     }
 }
