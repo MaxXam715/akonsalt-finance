@@ -38,8 +38,10 @@
 .mobile-menu .btn-close-nav {
     position: absolute;
     top: 10px;
+    z-index: 99;
     right: 10px;
     width: 48px;
+    height: 48px;
     border: 1px solid #ccc;
 }
 

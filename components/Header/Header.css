@@ -27,9 +27,13 @@
     height: 100%;
 }
 
+.G-header .col-logo .logo {
+    width: 190px;
+}
+
 @media (max-width: 767px) {
     .G-header .col-logo .logo {
-        width: 167px;
+        width: 160px;
     }
 }
 

@@ -9,7 +9,7 @@ export default function Header() {
     <div class="G-container">
         <div class="col-logo">
             <a href="/">
-                <img src="/assets/img/logo.svg?v=1.02" alt="logo" class="logo">
+                <img src="/assets/img/logo.svg?v=1.03" alt="logo" class="logo">
             </a>
         </div>
         <div class="col-nav">
