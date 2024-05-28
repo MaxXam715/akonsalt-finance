@@ -31,7 +31,7 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
     <meta property="twitter:image" content="/assets/img/logo-banner.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="vk:image" content="/assets/img/logo-banner.jpg" />
-    <meta name="description" content="" />
+    <meta name="description" content="Финансовая консультация, финансовое планирование, управление рискам" />
     <meta property="og:url" content="" />
     <meta property="article:author" content="Invest Globals" />
     <meta property="article:publisher" content="Invest Globals" />

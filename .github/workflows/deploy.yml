@@ -41,3 +41,19 @@ jobs:
             
             timestamp=$(date +%s)
             sed -i '2s/.*/'$timestamp'/' version.txt
+
+      # Send msg to Telegram
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: -1002204160156
+          token: 7208914864:AAE03jASMF8B0C-P8NWokK__ZH722u6B0gk
+          message: |
+            ✅ Action CI/CD успешно выполнен!
+            
+            Репозиторий: https://github.com/${{ github.repository }}
+            
+            👤 ${{ github.actor }} сделал коммит:
+            📝 ${{ github.event.commits[0].message }}
+
+            Посмотреть изменения: https://github.com/${{ github.repository }}/commit/${{github.sha}}
