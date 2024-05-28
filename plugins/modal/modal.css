@@ -288,7 +288,7 @@
 
 @media (max-width: 767px) {
     .mr-modal[direction='center'] {
-        padding: 0;
+        padding: 16px;
     }
 
     .mr-modal[direction='center'] .container-body {

@@ -10,6 +10,7 @@
 @import "/components/MobileNav/MobileNav.css";
 @import "/components/Footer/Footer.css";
 @import "/components/modal/Feedback/Feedback.css";
+@import "/components/modal/SuccessSend/SuccessSend.css";
 
 body {
     font-family: "Inter", sans-serif;

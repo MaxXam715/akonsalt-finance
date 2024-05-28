@@ -1,6 +1,7 @@
-import Modal from "../../../plugins/modal/modal.js";
+import Modal from "/plugins/modal/modal.js";
 import FormFields from "/plugins/form-fields/form-fields.js";
 import sendTelegram from "/js/sendTelegram.js";
+import SuccessSend from "/components/modal/SuccessSend/SuccessSend.js";
 
 export default function ModalFeedback() {
     var formFields = new FormFields();
@@ -10,7 +11,7 @@ export default function ModalFeedback() {
     modalHTML.innerHTML = `
     <div class="header">
         <span class="title">Записаться на консультацию</span>
-<!--        <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus</p>    -->
+<!--        <p class="desc">desc form</p>    -->
     </div>
     <form>
         <button type="button" class="btn btn-primary btn-send-request">Отправить</button>
@@ -46,9 +47,9 @@ export default function ModalFeedback() {
 
         if (getValuesForm.error) return false;
 
-        console.log("getValuesForm", getValuesForm)
+        modal.closeModal();
 
+        SuccessSend();
         sendTelegram(getValuesForm);
-
     });
 }
