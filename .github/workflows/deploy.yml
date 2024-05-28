@@ -12,18 +12,19 @@ env:
   SERVER_PASS: RwhdMjHU
   SERVER_PATH: /home/a/andranik1/you-finances.ru/public_html
 
+  TG_BOT_TOKEN: "7208914864:AAE03jASMF8B0C-P8NWokK__ZH722u6B0gk"
+  TG_ID_CHANEL: "-1002204160156"
+
 jobs:
 
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
-
     steps:
-      # Actions checkout
       - uses: actions/checkout@v3
         with:
           node-version: '18.x'
 
-      # Deploy
       - name: Connect on remote server and deploy
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -42,18 +43,40 @@ jobs:
             timestamp=$(date +%s)
             sed -i '2s/.*/'$timestamp'/' version.txt
 
-      # Send msg to Telegram
-      - name: send telegram message on push
+  telegram:
+    needs: deploy
+    if: always()
+    name: Send a message to Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send a message error to Telegram
+        if: ${{ needs.deploy.result != 'success' }}
         uses: appleboy/telegram-action@master
         with:
-          to: -1002204160156
-          token: 7208914864:AAE03jASMF8B0C-P8NWokK__ZH722u6B0gk
+          to: ${{ env.TG_ID_CHANEL }}
+          token: ${{ env.TG_BOT_TOKEN }}
           message: |
-            ✅ Action CI/CD успешно выполнен!
-            
-            Репозиторий: https://github.com/${{ github.repository }}
-            
+            ❌ Action CI/CD завершился с ошибкой :(
+
+            Проверьте логи для получения подробностей.
+
+            📂 Репозиторий: https://github.com/${{ github.repository }}
             👤 "${{ github.actor }}" сделал коммит:
             📝 ${{ github.event.commits[0].message }}
 
-            Посмотреть изменения: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Посмотреть изменения: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+
+      - name: Send a message success to Telegram
+        if: ${{ needs.deploy.result == 'success' }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ env.TG_ID_CHANEL }}
+          token: ${{ env.TG_BOT_TOKEN }}
+          message: |
+            ✅ Action CI/CD успешно выполнен!
+
+            📂 Репозиторий: https://github.com/${{ github.repository }}
+            👤 "${{ github.actor }}" сделал коммит:
+            📝 ${{ github.event.commits[0].message }}
+
+            Посмотреть изменения: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
