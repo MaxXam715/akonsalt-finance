@@ -19,22 +19,22 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
 
     <!-- meta -->
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="" />
-    <meta property="og:title" content=""/>
+    <meta property="og:site_name" content="You Finances" />
+    <meta property="og:title" content="You Finances"/>
     <meta property="og:image" content="/assets/img/logo-banner.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="">
+    <meta property="og:description" content="Финансовая консультация, финансовое планирование, управление рискам" />
+    <meta name="twitter:title" content="You Finances">
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:image" content="/assets/img/logo-banner.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="vk:image" content="/assets/img/logo-banner.jpg" />
     <meta name="description" content="Финансовая консультация, финансовое планирование, управление рискам" />
-    <meta property="og:url" content="" />
-    <meta property="article:author" content="Invest Globals" />
-    <meta property="article:publisher" content="Invest Globals" />
+    <meta property="og:url" content="https://www.you-finances.ru/" />
+    <meta property="article:author" content="You Finances" />
+    <meta property="article:publisher" content="You Finances" />
     <link rel="image_src" href="/assets/img/logo-banner.jpg">
 
     <!-- Favicons -->
