@@ -53,7 +53,7 @@ jobs:
             
             Репозиторий: https://github.com/${{ github.repository }}
             
-            👤 ${{ github.actor }} сделал коммит:
+            👤 "${{ github.actor }}" сделал коммит:
             📝 ${{ github.event.commits[0].message }}
 
             Посмотреть изменения: https://github.com/${{ github.repository }}/commit/${{github.sha}}
