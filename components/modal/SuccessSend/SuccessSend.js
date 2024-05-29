@@ -6,7 +6,7 @@ export default function SuccessSend() {
     modalHTML.innerHTML = `
     <div class="header">
         <span class="title">Заявка отправлена</span>
-<!--        <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus</p>   -->
+        <p class="desc">Спасибо! Ваша заявка принята, наш менеджер скоро свяжется с вами</p>   
         <img src="/assets/img/check-send.png" class="check-send" /> 
     </div>`;
 

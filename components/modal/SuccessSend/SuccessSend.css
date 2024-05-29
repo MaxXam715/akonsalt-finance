@@ -23,7 +23,7 @@
 @media (max-width: 767px) {
     .modal-success-send .header .title {
         font-size: 24px;
-        margin-top: -20px;
+        margin-top: -10px;
     }
 
     .modal-success-send .header .desc {
