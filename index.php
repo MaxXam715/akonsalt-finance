@@ -21,21 +21,21 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
     <meta property="og:locale" content="ru_RU">
     <meta property="og:site_name" content="You Finances" />
     <meta property="og:title" content="You Finances"/>
-    <meta property="og:image" content="/assets/img/logo-banner.jpg" />
+    <meta property="og:image" content="/static/logo-banner.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Финансовая консультация, финансовое планирование, управление рискам" />
     <meta name="twitter:title" content="You Finances">
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="/assets/img/logo-banner.jpg" />
+    <meta property="twitter:image" content="/static/logo-banner.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="vk:image" content="/assets/img/logo-banner.jpg" />
+    <meta property="vk:image" content="/static/logo-banner.jpg" />
     <meta name="description" content="Финансовая консультация, финансовое планирование, управление рискам" />
     <meta property="og:url" content="https://www.you-finances.ru/" />
     <meta property="article:author" content="You Finances" />
     <meta property="article:publisher" content="You Finances" />
-    <link rel="image_src" href="/assets/img/logo-banner.jpg">
+    <link rel="image_src" href="/static/logo-banner.jpg">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
