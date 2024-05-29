@@ -3,15 +3,16 @@ import FormFields from "/plugins/form-fields/form-fields.js";
 import sendTelegram from "/js/sendTelegram.js";
 import SuccessSend from "/components/modal/SuccessSend/SuccessSend.js";
 
-export default function ModalFeedback() {
+export default function ModalFeedback(data) {
     var formFields = new FormFields();
+    const isService = data.service || "";
 
     var modalHTML = document.createElement("div");
     modalHTML.classList.add("modal-wrapper");
     modalHTML.innerHTML = `
     <div class="header">
         <span class="title">Записаться на консультацию</span>
-<!--        <p class="desc">desc form</p>    -->
+        <p class="desc">${isService}</p>    
     </div>
     <form>
         <button type="button" class="btn btn-primary btn-send-request">Отправить</button>
@@ -41,7 +42,6 @@ export default function ModalFeedback() {
         }
     });
 
-
     modalHTML.querySelector(".btn-send-request").addEventListener("click", function () {
         var getValuesForm = formFields.getValuesForm(form);
 
@@ -50,6 +50,6 @@ export default function ModalFeedback() {
         modal.closeModal();
 
         SuccessSend();
-        sendTelegram(getValuesForm);
+        sendTelegram(getValuesForm, isService);
     });
 }

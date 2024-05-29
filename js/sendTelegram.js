@@ -1,7 +1,9 @@
-export default function sendTelegram(dataForm) {
+export default function sendTelegram(dataForm, service) {
     const botToken = '6003118587:AAEUbSOrWp6duziKsGyk_tWS-BpUyebBRcE';
     const chatId = '-1002049289669';
-    const message = `📩 Получена новая заявка! \n\n<b>Имя:</b> ${dataForm.name} \n<b>Тел:</b> ${dataForm.phone}`;
+    const isService = service || "";
+    const titleForm = (isService) ? `🔔 Заявка на консультацию: \n ${isService}` : `📩 Заявка на обратную связь.`;
+    const message = `${titleForm} \n\n👤 <b>Имя:</b> ${dataForm.name} \n📞 <b>Тел:</b> ${dataForm.phone}`;
 
     var sendTG = XMLHttpRequestAJAX({
         url: `https://api.telegram.org/bot${botToken}/sendMessage`,
@@ -12,8 +14,6 @@ export default function sendTelegram(dataForm) {
             parse_mode: 'HTML'
         }
     });
-
-    console.log("sendTG", sendTG)
 
     if (sendTG) {
         console.log('✅ В Telegram успешно отправлено');

@@ -42,8 +42,8 @@ function createCSSLink(path) {
     if (!document.getElementById(cssNavigation.id)) document.head.append(cssNavigation);
 }
 
-function openModalFeedback() {
-    importComponent("/components/modal/Feedback/Feedback.js");
+function openModalFeedback(data) {
+    importComponent("/components/modal/Feedback/Feedback.js", data);
 }
 
 function XMLHttpRequestAJAX(data) {

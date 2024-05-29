@@ -31,5 +31,5 @@ export default function Footer() {
     </div>`;
     document.querySelector("#app").after(footerHTML);
 
-    footerHTML.querySelector(".js-open-feedback").addEventListener("click", openModalFeedback);
+    footerHTML.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
 }

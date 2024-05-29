@@ -63,10 +63,6 @@ export default function MyServices() {
         itemService(myServices[i]);
     }
 
-    html.querySelectorAll(".js-open-feedback").forEach(function (btn) {
-        btn.addEventListener("click", openModalFeedback);
-    })
-
     function itemService(service) {
         var serviceHTML = document.createElement("div");
         serviceHTML.classList.add("item");
@@ -82,5 +78,7 @@ export default function MyServices() {
             </div>
         </div>`;
         html.querySelector(".list-my-services").append(serviceHTML);
+
+        serviceHTML.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback({service: service.title}));
     }
 }

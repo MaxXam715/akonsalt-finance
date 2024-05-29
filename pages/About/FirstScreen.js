@@ -18,5 +18,5 @@ export default function FirstScreen() {
     </div>`;
     document.querySelector("#app").append(html);
 
-    html.querySelector(".js-open-feedback").addEventListener("click", openModalFeedback);
+    html.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
 }
