@@ -1,5 +1,5 @@
 export default function sendTelegram(dataForm, service) {
-    const botToken = '6003118587:AAEUbSOrWp6duziKsGyk_tWS-BpUyebBRcE';
+    const botToken = '7077503376:AAEUqfH9RZmhgm3gi0Zc_kh3btdniy60Soo';
     const chatId = '-1002049289669';
     const isService = service || "";
     const titleForm = (isService) ? `🔔 Заявка на консультацию: \n ${isService}` : `📩 Заявка на обратную связь.`;
