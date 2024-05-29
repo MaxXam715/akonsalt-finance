@@ -14,8 +14,4 @@ export default function sendTelegram(dataForm, service) {
             parse_mode: 'HTML'
         }
     });
-
-    if (sendTG) {
-        console.log('✅ В Telegram успешно отправлено');
-    }
 }

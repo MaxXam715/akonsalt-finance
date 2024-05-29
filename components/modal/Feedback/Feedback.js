@@ -45,7 +45,10 @@ export default function ModalFeedback(data) {
     modalHTML.querySelector(".btn-send-request").addEventListener("click", function () {
         var getValuesForm = formFields.getValuesForm(form);
 
-        if (getValuesForm.error) return false;
+        if (getValuesForm.error) {
+            alert("Ошибка при отправке формы")
+            return false;
+        }
 
         modal.closeModal();
 

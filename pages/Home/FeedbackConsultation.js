@@ -1,4 +1,6 @@
 import FormFields from "/plugins/form-fields/form-fields.js";
+import SuccessSend from "/components/modal/SuccessSend/SuccessSend.js";
+import sendTelegram from "/js/sendTelegram.js";
 
 export default function FeedbackConsultation() {
     var formFields = new FormFields();
@@ -26,9 +28,14 @@ export default function FeedbackConsultation() {
     html.querySelector(".btn-send-request").addEventListener("click", function () {
         var getValuesForm = formFields.getValuesForm(form);
 
-        if (getValuesForm.error) return false;
+        if (getValuesForm.error) {
+            alert("Ошибка при отправке формы")
+            return false;
+        }
 
-        console.log("getValuesForm", getValuesForm)
+        form.reset();
+        SuccessSend();
+        sendTelegram(getValuesForm);
     });
 
     return html;
