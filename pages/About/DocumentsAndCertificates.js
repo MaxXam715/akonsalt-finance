@@ -2,45 +2,68 @@ export default function DocumentsAndCertificates() {
     const content = {
         "tabs": [
             {title: "Дипломы", key: "diplomas"},
-            {title: "Удостоверения", key: "certificates"},
-            {title: "Свидетельства", key: "evidence"}
+            {title: "Удостоверения", key: "identity"},
+            {title: "Свидетельства", key: "evidence"},
+            {title: "Сертификаты", key: "certificates"}
         ],
         "content": {
             "diplomas": [
                 {
                     title: "Диплом МГТУ им. Н.Э. Баумана",
                     img: "/assets/img/DocumentsAndCertificates/dip-1.png",
-                    link: "/assets/documents/Диплом МГТУ им. Н.Э. Баумана.pdf"
+                    link: "/assets/documents/diplomas/Диплом МГТУ им. Н.Э. Баумана.pdf"
                 },
                 {
                     title: "Диплом МГУТиУ им. К.Г. Разумовского",
                     img: "/assets/img/DocumentsAndCertificates/dip-2.png",
-                    link: "/assets/documents/Диплом_МГУТиУ_им_К_Г_Разумовского.pdf"
+                    link: "/assets/documents/diplomas/Диплом_МГУТиУ_им_К_Г_Разумовского.pdf"
                 },
             ],
-            "certificates": [
+            "identity": [
                 {
                     title: "Удостоверение МГТУ им. Н.Э. Баумана",
                     img: "/assets/img/DocumentsAndCertificates/cert-1.jpg",
-                    link: "/assets/documents/Удостоверение_МГТУ_им_Н_Э_Баумана.pdf"
+                    link: "/assets/documents/identity/Удостоверение_МГТУ_им_Н_Э_Баумана.pdf"
                 },
                 {
                     title: "Удостоверение РАНХиГС Управление Государственными и Муниципальными",
                     img: "/assets/img/DocumentsAndCertificates/cert-2.jpg",
-                    link: "/assets/documents/Удостоверение_РАНХиГС_Управление_Государственными_и_Муниципальными.pdf"
+                    link: "/assets/documents/identity/Удостоверение_РАНХиГС_Управление_Государственными_и_Муниципальными.pdf"
                 },
                 {
                     title: "Удостоверение Финансового Консультанта",
                     img: "/assets/img/DocumentsAndCertificates/cert-3.jpg",
-                    link: "/assets/documents/Удостоверение_Финансового_Консультанта.pdf"
+                    link: "/assets/documents/identity/Удостоверение_Финансового_Консультанта.pdf"
                 }
             ],
             "evidence": [
                 {
                     title: "Свидетельство о квалификации Финансовый Консультант",
                     img: "/assets/img/DocumentsAndCertificates/evidence-1.jpg",
-                    link: "/assets/documents/Свидетельство_о_квалификации_Финансовый_Консультант.pdf"
+                    link: "/assets/documents/evidence/Свидетельство_о_квалификации_Финансовый_Консультант.pdf"
                 }
+            ],
+            "certificates": [
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/DocumentsAndCertificates/certificate (1).jpg",
+                    link: "/assets/documents/certificates/certificate.pdf"
+                },
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/DocumentsAndCertificates/certificate (2).jpg",
+                    link: "/assets/documents/certificates/certificate (2).pdf"
+                },
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/DocumentsAndCertificates/certificate (3).jpg",
+                    link: "/assets/documents/certificates/certificate (3).pdf"
+                },
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/DocumentsAndCertificates/Сертификат_участника_мастер_класса_«Уроки_лидерства».jpg",
+                    link: "/assets/documents/certificates/Сертификат_участника_мастер_класса_«Уроки_лидерства».pdf"
+                },
             ]
         }
     };

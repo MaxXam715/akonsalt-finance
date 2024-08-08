@@ -2,6 +2,7 @@ import Modal from "/plugins/modal/modal.js";
 import FormFields from "/plugins/form-fields/form-fields.js";
 import sendTelegram from "/js/sendTelegram.js";
 import SuccessSend from "/components/modal/SuccessSend/SuccessSend.js";
+import sendByEmail from "/js/sendByEmail.js";
 
 export default function ModalFeedback(data) {
     var formFields = new FormFields();
@@ -54,5 +55,6 @@ export default function ModalFeedback(data) {
 
         SuccessSend();
         sendTelegram(getValuesForm, isService);
+        sendByEmail(getValuesForm, isService);
     });
 }
