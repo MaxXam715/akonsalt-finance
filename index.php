@@ -59,9 +59,9 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
 <script src="/plugins/imask/imask.js"></script>
 <script src="/plugins/fancybox/fancybox.umd.js"></script>
 
-<script src="/js/Helpers.js?v=<?= $version ?>"></script>
-<script src="/js/scripts.js?v=<?= $version ?>"></script>
-<script src="/js/router.js?v=<?= $version ?>"></script>
+<!--<script src="/js/Helpers.js?v=--><?php //= $version ?><!--"></script>-->
+<!--<script src="/js/scripts.js?v=--><?php //= $version ?><!--"></script>-->
+<!--<script src="/js/router.js?v=--><?php //= $version ?><!--"></script>-->
 
 </body>
 </html>
