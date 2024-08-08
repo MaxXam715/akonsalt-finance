@@ -10,21 +10,24 @@ export default function MyAchievements() {
         <div class="list-achievements">
             <div class="grid-container">
                 <div class="item">
-                    <span class="title">Состою в Торгово-Промышленной палате РФ</span>
+                    <span class="title">Включён в состав Торгово-Промышленной палате РФ</span>
 <!--                    <img src="/assets/img/tpprf.png" class="logo">               -->
                 </div>
                 <div class="item">
-                    <span class="title">Состою в Московской Торгово-Промышленной палате</span>
+                    <span class="title">Включён в состав Московской Торгово-Промышленной палате</span>
 <!--                    <img src="/assets/img/mtpp.png" class="logo">-->
+                </div>
+                <div class="item">
+                    <span class="title">Включен в Экспертный Совет по инновационному развитию</span>
                 </div>
             </div>
             <div class="grid-container">
                 <div class="item">
-                    <span class="title">Состою в сторонниках партии Единая Россия</span>
+                    <span class="title">Включён в состав сторонниках партии Единая Россия</span>
 <!--                    <img src="/assets/img/edin-russian.png" class="logo">-->
                 </div>
                 <div class="item">
-                    <span class="title">Состою в Федеральном Реестре независимой оценки квалификации</span>
+                    <span class="title">Включён в состав Федеральном Реестре независимой оценки квалификации</span>
 <!--                    <img src="/assets/img/nok.png" class="logo">-->
                 </div>
             </div>

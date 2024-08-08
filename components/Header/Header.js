@@ -15,7 +15,7 @@ export default function Header() {
         <div class="col-nav">
             <nav class="nav-wrapper">
                 <a href="/about" class="item">Обо мне</a>
-<!--                <a href="/services" class="item">Услуги</a>-->
+                <a href="/services" class="item">Услуги</a>
 <!--                <a href="/blog" class="item">Блог</a>-->
                 <a class="item anchor-contact">Контакты</a>
             </nav>

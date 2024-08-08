@@ -7,7 +7,7 @@ export default function FirstScreen() {
         <div class="row-container">
             <div class="about-me">
                 <h1 class="title-heading">Финансовые решения <br>на высшем уровне</h1>
-                <p class="desc">Аккредитованный финансовый советник с уникальными навыками анализа и прогнозирования рыночных тенденций для достижения высокой финансовой эффективности.</p>
+                <p class="desc">Аккредитованный финансовый советник (консультант) с уникальными навыками анализа и прогнозирования рыночных тенденций для достижения высокой финансовой эффективности.</p>
             </div>
             <div class="row-action">
                 <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>

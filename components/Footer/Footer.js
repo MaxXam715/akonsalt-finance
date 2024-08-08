@@ -12,8 +12,8 @@ export default function Footer() {
 <!--            <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.</p>-->
         </div>
         <div class="row-events">
-            <a href="https://t.me/${global_phone}" target="_blank" class="btn btn-outline">Telegram</a>
-            <a href="https://wa.me/${global_phone}" target="_blank" class="btn btn-outline">WhatsApp</a>
+<!--            <a href="https://t.me/${global_phone}" target="_blank" class="btn btn-outline">Telegram</a>-->
+<!--            <a href="https://wa.me/${global_phone}" target="_blank" class="btn btn-outline">WhatsApp</a>-->
             <a href="mailto: ${global_email}" target="_blank" class="btn btn-outline">E-mail</a>
             <a href="tel:${global_phone}" class="btn btn-outline">${phoneMask}</a>
             <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>

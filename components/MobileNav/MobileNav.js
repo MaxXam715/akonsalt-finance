@@ -14,7 +14,7 @@ export default function MobileNav() {
                 <a href="/" class="item">Главная</a>
                 <a href="/about" class="item">Обо мне</a>
 <!--                <a href="/cases" class="item">Кейсы</a>-->
-<!--                <a href="/services" class="item">Услуги</a>-->
+                <a href="/services" class="item">Услуги</a>
 <!--                <a href="/blog" class="item">Блог</a>-->
                 <a class="item anchor-contact">Контакты</a>
             </nav>
