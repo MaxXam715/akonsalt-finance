@@ -30,6 +30,9 @@ export default function MyAchievements() {
                     <span class="title">Включен в Федеральный реестр независимой оценки квалификации</span>
 <!--                    <img src="/assets/img/nok.png" class="logo">-->
                 </div>
+                <div class="item">
+                    <span class="title">Включен в Экспертный Совет по защите конкуренции на рынке финансовых услуг</span>
+                </div>
             </div>
         </div>
     </div>`;
