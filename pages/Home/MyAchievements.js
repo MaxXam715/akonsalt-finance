@@ -20,9 +20,6 @@ export default function MyAchievements() {
                 <div class="item">
                     <span class="title">Включен в Экспертный Совет по инновационному развитию</span>
                 </div>
-                <div class="item">
-                    <span class="title">Включен в сторонники партии Единая Россия</span>
-                </div>
             </div>
             <div class="grid-container">
                 <div class="item">
