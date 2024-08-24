@@ -12,29 +12,29 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>You Finances - Финансовые решения на высшем уровне</title>
+    <title>АконсалтФинанс - Финансовые решения на высшем уровне</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="version" content="<?= $version ?>">
 
     <!-- meta -->
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:site_name" content="You Finances" />
-    <meta property="og:title" content="You Finances"/>
+    <meta property="og:site_name" content="АконсалтФинанс" />
+    <meta property="og:title" content="АконсалтФинанс"/>
     <meta property="og:image" content="/static/logo-banner.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Финансовая консультация, финансовое планирование, управление рискам" />
-    <meta name="twitter:title" content="You Finances">
+    <meta name="twitter:title" content="АконсалтФинанс">
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:image" content="/static/logo-banner.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="vk:image" content="/static/logo-banner.jpg" />
     <meta name="description" content="Финансовая консультация, финансовое планирование, управление рискам" />
     <meta property="og:url" content="https://www.you-finances.ru/" />
-    <meta property="article:author" content="You Finances" />
-    <meta property="article:publisher" content="You Finances" />
+    <meta property="article:author" content="АконсалтФинанс" />
+    <meta property="article:publisher" content="АконсалтФинанс" />
     <link rel="image_src" href="/static/logo-banner.jpg">
 
     <!-- Favicons -->
