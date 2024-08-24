@@ -31,6 +31,11 @@
     width: 190px;
 }
 
+.G-header .col-logo .logo-text {
+    font-size: 20px;
+    color: #fff;
+}
+
 @media (max-width: 767px) {
     .G-header .col-logo .logo {
         width: 160px;

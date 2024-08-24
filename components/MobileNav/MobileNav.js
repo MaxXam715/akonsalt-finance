@@ -8,7 +8,7 @@ export default function MobileNav() {
         </button>
         <div class="nav-container">
             <a href="/" class="logo-container">
-                <img src="/assets/img/logo.svg?v=1.02" alt="logo">
+<!--                <img src="/assets/img/logo.svg?v=1.02" alt="logo">-->
             </a>
             <nav class="nav-wrapper">
                 <a href="/" class="item">Главная</a>

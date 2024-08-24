@@ -155,7 +155,7 @@ export default function Services() {
                         <h4 class="title-form">QR код</h4>
                         <span class="desc-form">Оплата любой суммы</span>
                         <button type="button" class="btn btn-primary">Оплатить</button>
-                        <img src="/assets/img/layout/robokassa-logo.svg?v=1.02" class="logo-kassa" alt="">
+<!--                        <img src="/assets/img/layout/robokassa-logo.svg?v=1.02" class="logo-kassa" alt="">-->
                     </form>
                 </div>
                 <div class="col-info">
