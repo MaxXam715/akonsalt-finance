@@ -5,7 +5,7 @@ $version_new = "";
 $root = $_SERVER['DOCUMENT_ROOT'];
 require_once $root . '/backend/clearCash.php';
 
-if ($_SERVER['HTTP_HOST'] != 'you-finances.ru') {
+if ($_SERVER['HTTP_HOST'] != 'аконсалт-финанс.рф' && $_SERVER['HTTP_HOST'] != 'akonsalt-finance.ru') {
     $version = mt_rand(10000, 99999999);
 } else {
     $getFileVersion = file($root."/backend/version.txt", FILE_IGNORE_NEW_LINES);
