@@ -34,7 +34,12 @@ export default function DocumentsAndCertificates() {
                     title: "Удостоверение Финансового Консультанта",
                     img: "/assets/img/DocumentsAndCertificates/cert-3.jpg",
                     link: "/assets/documents/identity/Удостоверение_Финансового_Консультанта.pdf"
-                }
+                },
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/DocumentsAndCertificates/certificate (3).jpg",
+                    link: "/assets/documents/certificates/certificate (3).pdf"
+                },
             ],
             "evidence": [
                 {
@@ -53,11 +58,6 @@ export default function DocumentsAndCertificates() {
                     title: "Сертификат",
                     img: "/assets/img/DocumentsAndCertificates/certificate (2).jpg",
                     link: "/assets/documents/certificates/certificate (2).pdf"
-                },
-                {
-                    title: "Сертификат",
-                    img: "/assets/img/DocumentsAndCertificates/certificate (3).jpg",
-                    link: "/assets/documents/certificates/certificate (3).pdf"
                 },
                 {
                     title: "Сертификат",
@@ -122,9 +122,10 @@ export default function DocumentsAndCertificates() {
             <div class="preview-photo">
                 <img src="${content.img}" class="image" />    
             </div>
-            <div class="footer">
-                <span class="title">Диплом о профессиональной переподготовке</span>
-            </div>`;
+<!--            <div class="footer">-->
+<!--                <span class="title">Диплом о профессиональной переподготовке</span>-->
+<!--            </div>-->
+`;
             outputTag.append(cardHTML);
 
             // cardHTML.addEventListener("click", function () {
