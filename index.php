@@ -32,7 +32,7 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="vk:image" content="/static/logo-banner.jpg" />
     <meta name="description" content="Финансовая консультация, финансовое планирование, управление рискам" />
-    <meta property="og:url" content="https://www.you-finances.ru/" />
+    <meta property="og:url" content="https://akonsalt-finance.ru/" />
     <meta property="article:author" content="АконсалтФинанс" />
     <meta property="article:publisher" content="АконсалтФинанс" />
     <link rel="image_src" href="/static/logo-banner.jpg">
