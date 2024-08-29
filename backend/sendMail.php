@@ -1,11 +1,10 @@
 <?php
 
-$method = $_SERVER['REQUEST_METHOD'];
 $get_post_data = file_get_contents("php://input");
 $POST = json_decode($get_post_data, true);
 
-$nameClient = (isset($POST['form']['name']) === true) ? $POST['form']['name'] : "не указано";
-$phoneClient = (isset($POST['form']['phone']) === true) ? $POST['form']['phone'] : "не указано";
+$nameClient = (isset($POST['form']['name']) === true && $POST['form']['name'] !== "") ? $POST['form']['name'] : "не указано";
+$phoneClient = (isset($POST['form']['phone']) === true && $POST['form']['phone'] !== "") ? $POST['form']['phone'] : "не указан";
 $isService = (isset($POST['service']) === true && $POST['service'] !== "") ? "📩 Услуга: " . $POST['service'] : "📩 Заявка на обратную связь.";
 
 // Задаем кодировку для корректного отображения содержания
