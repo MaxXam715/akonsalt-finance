@@ -6,44 +6,22 @@ $charset = 'UTF-8';
 // несколько получателей
 $to = 'gorbatenkomax@yandex.ru';
 
-// тема письма
-$subject = 'Birthday Reminders for August';
+$subject = 'Тема письма';
+$content = '<html><body>';
+$content .= '<h1>Здравствуйте!</h1>';
+$content .= '<p>Это тестовое письмо.</p>';
+$content .= '</body></html>';
 
-// текст письма
-$message = '
-<html>
-<head>
-  <title>Birthday Reminders for August</title>
-</head>
-<body>
-  <p>Here are the birthdays upcoming in August!</p>
-  <table>
-    <tr>
-      <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
-    </tr>
-    <tr>
-      <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
-    </tr>
-    <tr>
-      <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
-    </tr>
-  </table>
-</body>
-</html>
-';
+// Оформляем заголовки, чтобы письмо выглядело правильно и не попадало в спам
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=$charset\r\n";
+$headers .= "From: support@akonsalt-finance.ru\r\n";
 
-// Для отправки HTML-письма должен быть установлен заголовок Content-type
-$headers = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+// Определяем дополнительные параметры для отправки
+$additional_parameters = "-f support@akonsalt-finance.ru";
 
-// Дополнительные заголовки
-$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-$headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
-$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
-
-// Отправляем
-if (mail($to, $subject, $message, $headers)) {
+// Отправляем письмо с необходимыми заголовками и параметрами
+if(mail($to, $subject, $content, $headers, $additional_parameters)) {
     echo "Письмо успешно отправлено.";
 } else {
     echo "Ошибка при отправке письма.";
