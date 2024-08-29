@@ -18,8 +18,8 @@ $content = '
 <html>
 <body>
     <div>'. $isService .'</div>
-    <div>👤 Имя: '. $nameClient .'</div>
     <br>
+    <div>👤 Имя: '. $nameClient .'</div>
     <div>📞 Тел: <a href="tel: '. $phoneClient .'" style="color: #000;">'. $phoneClient .'</a></div>
 </body>
 </html>
