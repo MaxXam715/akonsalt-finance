@@ -11,7 +11,7 @@ $isService = (isset($POST['service']) === true && $POST['service'] !== "") ? "�
 $charset = 'UTF-8';
 
 // Получатель
-$to = 'gorbatenkomax@yandex.ru';
+$to = 'official@akonsalt-finance.ru';
 
 $subject = 'Новая заявка с сайта';
 $content = '
