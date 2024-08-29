@@ -54,7 +54,7 @@ export default function ModalFeedback(data) {
         modal.closeModal();
 
         SuccessSend();
-        sendTelegram(getValuesForm, isService);
+        // sendTelegram(getValuesForm, isService);
         sendByEmail(getValuesForm, isService);
     });
 }
