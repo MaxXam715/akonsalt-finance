@@ -17,7 +17,7 @@ $subject = 'Новая заявка с сайта';
 $content = '
 <html>
 <body>
-    <div>'. $isService .'</div>
+    <div><b>'. $isService .'</b></div>
     <br>
     <div>👤 Имя: '. $nameClient .'</div>
     <div>📞 Тел: <a href="tel: '. $phoneClient .'" style="color: #000;">'. $phoneClient .'</a></div>
