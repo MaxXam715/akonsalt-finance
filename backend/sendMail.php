@@ -21,7 +21,7 @@ $content = '
     <div>'. $isService .'</div>
     <div>👤 Имя: '. $nameClient .'</div>
     <br>
-    <div>📞 Тел: '. $phoneClient .'</div>
+    <div>📞 Тел: <a href="tel: '. $phoneClient .'" style="color: #000;">'. $phoneClient .'</a></div>
 </body>
 </html>
 ';
