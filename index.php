@@ -21,33 +21,33 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
     <meta property="og:locale" content="ru_RU">
     <meta property="og:site_name" content="АконсалтФинанс" />
     <meta property="og:title" content="АконсалтФинанс"/>
-    <meta property="og:image" content="/static/logo-banner.jpg" />
+<!--    <meta property="og:image" content="/static/logo-banner.jpg" />-->
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Финансовая консультация, финансовое планирование, управление рискам" />
     <meta name="twitter:title" content="АконсалтФинанс">
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="/static/logo-banner.jpg" />
+<!--    <meta property="twitter:image" content="/static/logo-banner.jpg" />-->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="vk:image" content="/static/logo-banner.jpg" />
+<!--    <meta property="vk:image" content="/static/logo-banner.jpg" />-->
     <meta name="description" content="Финансовая консультация, финансовое планирование, управление рискам" />
     <meta property="og:url" content="https://akonsalt-finance.ru/" />
     <meta property="article:author" content="АконсалтФинанс" />
     <meta property="article:publisher" content="АконсалтФинанс" />
-    <link rel="image_src" href="/static/logo-banner.jpg">
+<!--    <link rel="image_src" href="/static/logo-banner.jpg">-->
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="/static/favicon/favicon-128x128.png">
-    <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#000000">
+<!--    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">-->
+<!--    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">-->
+<!--    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">-->
+<!--    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">-->
+<!--    <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon/favicon-48x48.png">-->
+<!--    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">-->
+<!--    <link rel="icon" type="image/png" sizes="128x128" href="/static/favicon/favicon-128x128.png">-->
+<!--    <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#000000">-->
+<!--    <meta name="msapplication-TileColor" content="#000000">-->
+<!--    <meta name="theme-color" content="#000000">-->
 
     <!-- Style -->
     <link rel="stylesheet" href="/css/global.css?v=<?= $version ?>">

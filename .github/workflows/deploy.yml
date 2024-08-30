@@ -10,7 +10,7 @@ env:
   SERVER_USER: andranik1
   SERVER_PORT: 22
   SERVER_PASS: RwhdMjHU
-  SERVER_PATH: /home/a/andranik1/you-finances.ru/public_html
+  SERVER_PATH: /home/a/andranik1/akonsalt-finance.ru/public_html
 
   TG_BOT_TOKEN: "7208914864:AAE03jASMF8B0C-P8NWokK__ZH722u6B0gk"
   TG_ID_CHANEL: "-1002204160156"
