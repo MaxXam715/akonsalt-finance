@@ -58,6 +58,8 @@ $versionJSON = file_get_contents($root . "/static/version.txt");
 
 <script src="/plugins/imask/imask.js"></script>
 <script src="/plugins/fancybox/fancybox.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.2.146/pdf.min.js"></script>
+<script src="/plugins/pdfThumbnails-master/pdfThumbnails.js"></script>
 
 <script src="/js/Helpers.js?v=<?= $version ?>"></script>
 <script src="/js/scripts.js?v=<?= $version ?>"></script>

@@ -10,6 +10,15 @@ export default function MyAchievements() {
         <div class="list-achievements">
             <div class="grid-container">
                 <div class="item">
+                    <span class="title">Профессиональный участник рынка ценных бумаг</span>
+                </div>
+                <div class="item">
+                    <span class="title">Эксперт Федеральной инновационной площадки Минобрнауки России</span>
+                </div>
+                <div class="item">
+                    <span class="title">Эксперт  XXI Всероссийского конкурса молодежных авторских  проектов</span>
+                </div>
+                <div class="item">
                     <span class="title">Включен в сторонники партии Единая Россия</span>
 <!--                    <img src="/assets/img/edin-russian.png" class="logo">-->
                 </div>

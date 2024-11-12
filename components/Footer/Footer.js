@@ -9,7 +9,6 @@ export default function Footer() {
         <div class="top-line"></div>
         <div class="text-block">
             <h3 class="heading heading-gradient">Контакты</h3>
-<!--            <p class="desc">Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.</p>-->
         </div>
         <div class="row-events">
 <!--            <a href="https://t.me/${global_phone}" target="_blank" class="btn btn-outline">Telegram</a>-->
@@ -20,11 +19,11 @@ export default function Footer() {
         </div>
         <div class="cooperate-container">
             <div class="user-info">
-                <span>Индивидуальный предприниматель</span>
+<!--                <span>Физическое лицо</span>-->
                 <a href="https://nok-nark.ru/cert/detail/65a0031cf1686" target="_blank">Федеральный реестр независимой оценки квалификации</a>
             </div>
             <div class="tech-block">
-                <a href="/privacy-policy">Политика конфиденциальности</a>
+<!--                <a href="/privacy-policy">Политика конфиденциальности</a>-->
                 <span>© ${currentYear} Вся информация опубликована в информационных целях. <br> Все права защищены</span>
             </div>
         </div>
