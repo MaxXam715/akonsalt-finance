@@ -29,6 +29,16 @@ export default function DocumentsAndCertificates() {
                     img: "/assets/img/documents/certificates/certificate-4.jpg",
                     link: "/assets/documents/certificates/certificate-4.pdf"
                 },
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/documents/certificates/certificate-5.jpg",
+                    link: "/assets/documents/certificates/certificate-5.pdf"
+                },
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/documents/certificates/certificate-6.jpg",
+                    link: "/assets/documents/certificates/certificate-6.pdf"
+                },
             ],
             "diplomas": [
                 {
@@ -51,13 +61,28 @@ export default function DocumentsAndCertificates() {
                     img: "/assets/img/documents/diplomas/diploma-4.jpg",
                     link: "/assets/documents/diplomas/diploma-4.pdf"
                 },
+                {
+                    title: "Диплом МГУТиУ им. К.Г. Разумовского",
+                    img: "/assets/img/documents/diplomas/diploma-5.jpg",
+                    link: "/assets/documents/diplomas/diploma-5.pdf"
+                },
+                {
+                    title: "Диплом МГУТиУ им. К.Г. Разумовского",
+                    img: "/assets/img/documents/diplomas/diploma-6.jpg",
+                    link: "/assets/documents/diplomas/diploma-6.pdf"
+                },
             ],
             "evidence": [
                 {
                     title: "Свидетельство о квалификации Финансовый Консультант",
                     img: "/assets/img/documents/evidence/evidence-1.jpg",
+                    link: "/assets/documents/evidence/evidence-1.pdf"
+                },
+                {
+                    title: "Свидетельство о квалификации Финансовый Консультант",
+                    img: "/assets/img/documents/evidence/evidence-2.jpg",
                     link: "/assets/documents/evidence/evidence-2.pdf"
-                }
+                },
             ],
             "gratitude": [
                 {
@@ -81,6 +106,16 @@ export default function DocumentsAndCertificates() {
                     title: "Удостоверение Финансового Консультанта",
                     img: "/assets/img/documents/identity/identity-3.jpg",
                     link: "/assets/documents/identity/identity-3.pdf"
+                },
+                {
+                    title: "Удостоверение Финансового Консультанта",
+                    img: "/assets/img/documents/identity/identity-4.jpg",
+                    link: "/assets/documents/identity/identity-4.pdf"
+                },
+                {
+                    title: "Удостоверение Финансового Консультанта",
+                    img: "/assets/img/documents/identity/identity-5.jpg",
+                    link: "/assets/documents/identity/identity-5.pdf"
                 },
             ],
         }
