@@ -55,31 +55,31 @@ export default function DocumentsAndCertificates() {
             "evidence": [
                 {
                     title: "Свидетельство о квалификации Финансовый Консультант",
-                    img: "/assets/img/documents/evidence-1.jpg",
+                    img: "/assets/img/documents/evidence/evidence-1.jpg",
                     link: "/assets/documents/evidence/evidence-2.pdf"
                 }
             ],
             "gratitude": [
                 {
                     title: "Свидетельство о квалификации Финансовый Консультант",
-                    img: "/assets/img/documents/evidence-1.jpg",
-                    link: "/assets/documents/evidence/evidence-2.pdf"
+                    img: "/assets/img/documents/gratitude/gratitude-1.jpg",
+                    link: "/assets/documents/gratitude/gratitude-1.pdf"
                 }
             ],
             "identity": [
                 {
                     title: "Удостоверение МГТУ им. Н.Э. Баумана",
-                    img: "/assets/img/documents/cert-1.jpg",
+                    img: "/assets/img/documents/identity/identity-1.jpg",
                     link: "/assets/documents/identity/identity-1.pdf"
                 },
                 {
                     title: "Удостоверение РАНХиГС Управление Государственными и Муниципальными",
-                    img: "/assets/img/documents/cert-2.jpg",
+                    img: "/assets/img/documents/identity/identity-2.jpg",
                     link: "/assets/documents/identity/identity-2.pdf"
                 },
                 {
                     title: "Удостоверение Финансового Консультанта",
-                    img: "/assets/img/documents/cert-3.jpg",
+                    img: "/assets/img/documents/identity/identity-3.jpg",
                     link: "/assets/documents/identity/identity-3.pdf"
                 },
             ],
