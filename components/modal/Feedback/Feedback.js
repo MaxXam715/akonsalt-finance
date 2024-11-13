@@ -47,7 +47,6 @@ export default function ModalFeedback(data) {
         var getValuesForm = formFields.getValuesForm(form);
 
         if (getValuesForm.error) {
-            alert("Ошибка при отправке формы")
             return false;
         }
 

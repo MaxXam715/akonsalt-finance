@@ -29,7 +29,6 @@ export default function FeedbackConsultation() {
         var getValuesForm = formFields.getValuesForm(form);
 
         if (getValuesForm.error) {
-            alert("Ошибка при отправке формы")
             return false;
         }
 
