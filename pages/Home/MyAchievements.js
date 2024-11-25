@@ -8,41 +8,16 @@ export default function MyAchievements() {
             <h2 class="title-heading heading-gradient-2">Мои успехи и достижения</h2>
         </div>
         <div class="list-achievements">
-            <div class="grid-container">
-                <div class="item">
-                    <span class="title">Профессиональный участник рынка ценных бумаг</span>
-                </div>
-                <div class="item">
-                    <span class="title">Эксперт Федеральной инновационной площадки Минобрнауки России</span>
-                </div>
-                <div class="item">
-                    <span class="title">Эксперт  XXI Всероссийского конкурса молодежных авторских  проектов</span>
-                </div>
-                <div class="item">
-                    <span class="title">Включен в сторонники партии Единая Россия</span>
-<!--                    <img src="/assets/img/edin-russian.png" class="logo">-->
-                </div>
-                <div class="item">
-                    <span class="title">Включен в Торгово-Промышленную Палату РФ</span>
-<!--                    <img src="/assets/img/tpprf.png" class="logo">               -->
-                </div>
-                <div class="item">
-                    <span class="title">Включен в Московскую Торгово-Промышленную Палату</span>
-<!--                    <img src="/assets/img/mtpp.png" class="logo">-->
-                </div>
-            </div>
-            <div class="grid-container">
-                <div class="item">
-                    <span class="title">Включен в Экспертный Совет по инновационному развитию</span>
-                </div>
-                <div class="item">
-                    <span class="title">Включен в Федеральный реестр независимой оценки квалификации</span>
-<!--                    <img src="/assets/img/nok.png" class="logo">-->
-                </div>
-                <div class="item">
-                    <span class="title">Включен в Экспертный Совет по защите конкуренции на рынке финансовых услуг</span>
-                </div>
-            </div>
+            <span class="item">Включен в сторонники партии Единая Россия</span>
+            <span class="item">Включен в Московский иновационный кластер</span>
+            <span class="item">Включен в Торгово-Промышленную Палату РФ</span>
+            <span class="item">Профессиональный участник рынка ценных бумаг</span>
+            <span class="item">Включен в Московскую Торгово-Промышленную Палату</span>
+            <span class="item">Включен в Экспертный Совет по инновационному развитию</span>
+            <span class="item">Включен в Федеральный реестр независимой оценки квалификации</span>
+            <span class="item">Эксперт Федеральной инновационной площадки Минобрнауки России</span>
+            <span class="item">Эксперт XXI Всероссийского конкурса молодежных авторских проектов</span>
+            <span class="item">Включен в Экспертный Совет по защите конкуренции на рынке финансовых услуг</span>
         </div>
     </div>`;
     document.querySelector("#app").append(html);

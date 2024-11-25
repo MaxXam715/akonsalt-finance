@@ -23,7 +23,7 @@ export default function Footer() {
                 <a href="https://nok-nark.ru/cert/detail/65a0031cf1686" target="_blank">Федеральный реестр независимой оценки квалификации</a>
             </div>
             <div class="tech-block">
-<!--                <a href="/privacy-policy">Политика конфиденциальности</a>-->
+                <a href="/privacy-policy">Политика конфиденциальности</a>
                 <span>© ${currentYear} Вся информация опубликована в информационных целях. <br> Все права защищены</span>
             </div>
         </div>

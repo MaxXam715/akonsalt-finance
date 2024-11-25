@@ -39,6 +39,11 @@ export default function DocumentsAndCertificates() {
                     img: "/assets/img/documents/certificates/certificate-6.jpg",
                     link: "/assets/documents/certificates/certificate-6.pdf"
                 },
+                {
+                    title: "Сертификат",
+                    img: "/assets/img/documents/certificates/certificate-7.jpg",
+                    link: "/assets/documents/certificates/certificate-7.pdf"
+                },
             ],
             "diplomas": [
                 {
@@ -70,6 +75,21 @@ export default function DocumentsAndCertificates() {
                     title: "Диплом МГУТиУ им. К.Г. Разумовского",
                     img: "/assets/img/documents/diplomas/diploma-6.jpg",
                     link: "/assets/documents/diplomas/diploma-6.pdf"
+                },
+                {
+                    title: "Диплом МГУТиУ им. К.Г. Разумовского",
+                    img: "/assets/img/documents/diplomas/diploma-7.jpg",
+                    link: "/assets/documents/diplomas/diploma-7.pdf"
+                },
+                {
+                    title: "Диплом МГУТиУ им. К.Г. Разумовского",
+                    img: "/assets/img/documents/diplomas/diploma-8.jpg",
+                    link: "/assets/documents/diplomas/diploma-8.pdf"
+                },
+                {
+                    title: "Диплом МГУТиУ им. К.Г. Разумовского",
+                    img: "/assets/img/documents/diplomas/diploma-9.jpg",
+                    link: "/assets/documents/diplomas/diploma-9.pdf"
                 },
             ],
             "evidence": [
@@ -173,7 +193,7 @@ export default function DocumentsAndCertificates() {
             cardHTML.classList.add("item");
             cardHTML.innerHTML = `
             <div class="preview-photo">
-                <img src="${content.img}?v=5" class="image" />    
+                <img src="${content.img}?v=6" class="image" />    
             </div>
 <!--            <div class="footer">-->
 <!--                <span class="title">Диплом о профессиональной переподготовке</span>-->
