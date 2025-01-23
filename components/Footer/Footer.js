@@ -21,10 +21,12 @@ export default function Footer() {
             <div class="user-info">
 <!--                <span>Физическое лицо</span>-->
                 <a href="https://nok-nark.ru/cert/detail/65a0031cf1686" target="_blank">Федеральный реестр независимой оценки квалификации</a>
+                <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank">ФЗ РФ №152-ФЗ «О персональных данных»</a>
+                <a href="https://ivo.garant.ru/#/document/12148555/paragraph/3471:0" target="_blank">ФЗ РФ №149-ФЗ «О защите информации»</a>
             </div>
             <div class="tech-block">
                 <a href="/privacy-policy">Политика конфиденциальности</a>
-                <span>© ${currentYear} Вся информация опубликована в информационных целях. <br> Все права защищены</span>
+                <span>© 2024-${currentYear} «Аконсалт-Финанс». <br>https://akonsalt-finance.ru/</span>
             </div>
         </div>
     </div>`;

@@ -188,7 +188,7 @@ export default function DocumentsAndCertificates() {
             const content = contents[i];
 
             var cardHTML = document.createElement("a");
-            cardHTML.setAttribute("href", content.link);
+            cardHTML.setAttribute("href", content.img);
             cardHTML.setAttribute("target", "_blank");
             cardHTML.classList.add("item");
             cardHTML.innerHTML = `

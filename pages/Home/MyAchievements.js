@@ -5,7 +5,7 @@ export default function MyAchievements() {
     html.innerHTML = `
     <div class="G-container">
         <div class="header">
-            <h2 class="title-heading heading-gradient-2">Мои успехи и достижения</h2>
+            <h2 class="title-heading heading-gradient-2">Доска успехов и достижений</h2>
         </div>
         <div class="list-achievements">
             <span class="item">Включен в сторонники партии Единая Россия</span>

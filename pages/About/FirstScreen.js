@@ -7,8 +7,13 @@ export default function FirstScreen() {
         <div class="bg-gradient"></div>
         <div class="grid-container">
             <div class="about-me">
-                <h1 class="title-heading">Я, Андраник Саркисович</h1>
-                <p class="desc">Квалифицированный и аккредитованный финансовый советник (консультант), состою в Федеральном реестре независимой оценки квалификации (свидетельство 08.00800.01.00000003.27)</p>
+                <h1 class="title-heading">Основатель <br>Аконсалт-Финанс</h1>
+                <h2 class="my-name">Андраник Саркисович</h2>
+                <div class="desc-wrapper">
+                    <p class="desc">Аккредитованный финансовый консультант.</p>
+                    <p class="desc">Сертифицированный венчурный аналитик</p>
+                    <p class="desc">Сертифицированный консультант по коммерциализации интеллектуальной собственности</p>
+                </div>
                 <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
             </div>
             <div class="col-photo">

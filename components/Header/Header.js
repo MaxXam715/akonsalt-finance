@@ -8,7 +8,7 @@ export default function Header() {
     headerHTML.innerHTML = `
     <div class="G-container">
         <div class="col-logo">
-            <a href="/" class="logo-text">АконсалтФинанс
+            <a href="/" class="logo-text">Аконсалт-Финанс
 <!--                <img src="/assets/img/logo.svg?v=1.03" alt="logo" class="logo">-->
             </a>
         </div>
