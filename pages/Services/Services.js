@@ -102,17 +102,17 @@ export default function Services() {
         <span class="title">${service.title}</span>
         <div class="desc-container">
             <span class="text">${service.desc}</span>
-            <div class="events-footer">
+            <!--<div class="events-footer">
                 <button type="button" class="btn btn-primary js-open-feedback">Заказать услугу</button>
                 <button type="button" class="btn btn-outline btn-shadow js-open-feedback">Консультация</button>
                 <span class="cost">${service.price.toLocaleString("ru-RU", {style: "currency", currency: "RUB", maximumFractionDigits: 0})}</span>
-            </div>
+            </div>-->
         </div>`;
         html.querySelector(".list-services").append(serviceHTML);
 
-        serviceHTML.querySelectorAll(".js-open-feedback").forEach(function (btn) {
-            btn.addEventListener("click", () => openModalFeedback({service: service.title}));
-        })
+        // serviceHTML.querySelectorAll(".js-open-feedback").forEach(function (btn) {
+        //     btn.addEventListener("click", () => openModalFeedback({service: service.title}));
+        // })
     }
 
     // по клику на услугу - открываем/закрываем аккордион

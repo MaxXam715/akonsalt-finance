@@ -18,7 +18,7 @@ export default function MyServices() {
     document.querySelector("#app").append(html);
 
 
-    html.querySelector(".G-container").append(FeedbackConsultation());
+    // html.querySelector(".G-container").append(FeedbackConsultation());
 
     const myServices = [
         {
@@ -68,11 +68,11 @@ export default function MyServices() {
             <h3 class="title">${service.title}</h3>
             <div class="desc-preview">
                 <p class="desc">${service.desc}</p>
-                <button type="button" class="btn btn-primary js-open-feedback">Заказать услугу</button>
+<!--                <button type="button" class="btn btn-primary js-open-feedback">Заказать услугу</button>-->
             </div>
         </div>`;
         html.querySelector(".list-my-services").append(serviceHTML);
 
-        serviceHTML.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback({service: service.title}));
+        // serviceHTML.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback({service: service.title}));
     }
 }

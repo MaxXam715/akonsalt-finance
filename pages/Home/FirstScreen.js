@@ -9,10 +9,10 @@ export default function FirstScreen() {
                 <h1 class="title-heading">Финансовые решения <br>на высшем уровне</h1>
                 <p class="desc">Управление рисками - это искусство, которое превращает неопределенность в возможности , не исключайте риски из уравнения жизни, а научитесь интегрировать их в свои решения через Аконсалт-Финанс</p>
             </div>
-            <div class="row-action">
-                <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
-                <a href="/services" class="btn btn-outline btn-shadow">Заказать услугу</a>
-            </div>
+<!--            <div class="row-action">-->
+<!--                <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>-->
+<!--                <a href="/services" class="btn btn-outline btn-shadow">Заказать услугу</a>-->
+<!--            </div>-->
         </div>
         
 <!--        <div class="official-partner">-->
@@ -27,5 +27,5 @@ export default function FirstScreen() {
     </div>`;
     document.querySelector("#app").append(html);
 
-    html.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
+    // html.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
 }

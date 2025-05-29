@@ -14,7 +14,7 @@ export default function FirstScreen() {
                     <p class="desc">Сертифицированный венчурный аналитик</p>
                     <p class="desc">Сертифицированный консультант по коммерциализации интеллектуальной собственности</p>
                 </div>
-                <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
+<!--                <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>-->
             </div>
             <div class="col-photo">
                 <img src="/assets/img/my-photo-3.png" alt="me">
@@ -23,5 +23,5 @@ export default function FirstScreen() {
     </div>`;
     document.querySelector("#app").append(html);
 
-    html.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
+    // html.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
 }

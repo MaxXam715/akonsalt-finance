@@ -16,12 +16,13 @@ export default function MobileNav() {
 <!--                <a href="/cases" class="item">Кейсы</a>-->
                 <a href="/services" class="item">Услуги</a>
 <!--                <a href="/blog" class="item">Блог</a>-->
-                <a class="item anchor-contact">Контакты</a>
+<!--                <a class="item anchor-contact">Контакты</a>-->
             </nav>
-            <div class="contact-me">
+            <!--<div class="contact-me">
                 <a href="tel: ${global_phone}" class="btn btn-primary btn-call">${phoneNumber(global_phone)}</a>
                 <a href="mailto: ${global_email}" class="btn btn-outline btn-shadow btn-email">${global_email}</a>
             </div>
+            -->
         </div>
     </div>`;
     document.querySelector(".G-header").before(navHTML);
@@ -36,13 +37,13 @@ export default function MobileNav() {
     });
 
     // по клику на "Контакты" опускаемся вниз сайта к блоку <footer>
-    navHTML.querySelector(".nav-wrapper .anchor-contact").addEventListener("click", function () {
-        const footer = document.querySelector("footer");
-        if (footer) {
-            closeNav();
-            footer.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
+    // navHTML.querySelector(".nav-wrapper .anchor-contact").addEventListener("click", function () {
+    //     const footer = document.querySelector("footer");
+    //     if (footer) {
+    //         closeNav();
+    //         footer.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    // });
 
     function closeNav() {
         navHTML.classList.remove("show");

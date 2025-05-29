@@ -10,7 +10,7 @@ export default function AboutMe() {
                 <div class="my-skills">
                     <div class="item">
                         <span class="title">Профессионал</span>
-                        <span class="desc">Профессионализм Включен в Московский Инновационный Кластер</span>
+                        <span class="desc">Включен в Московский Инновационный Кластер</span>
                     </div>
                     <div class="item">
                         <span class="title">Аналитик</span>
@@ -27,11 +27,11 @@ export default function AboutMe() {
             </div>
         </div>
         <div class="action-block">
-            <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>
+<!--            <button type="button" class="btn btn-primary js-open-feedback">Записаться на консультацию</button>-->
             <a href="/about" class="btn btn-outline btn-shadow">Подробнее ещё</a>
         </div>
     </div>`;
     document.querySelector("#app").append(html);
 
-    html.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
+    // html.querySelector(".js-open-feedback").addEventListener("click", () => openModalFeedback());
 }
