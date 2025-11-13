@@ -5,7 +5,7 @@ export default function Intro() {
     return (
         <section className={style['section-intro']} style={{backgroundImage: `url(${imgIntro})`}}>
             <div className={`g-container ${style['container-wrapper']}`}>
-                <h1 className={style['heading']}>Финансовые решения <br/>на высшем уровне</h1>
+                <h1 className={style['heading']}>Ваши амбиции <br/>станут достижимыми</h1>
                 <p className={style['hint']}>Консалтинговая компания с экcпертным опытом</p>
             </div>
         </section>
