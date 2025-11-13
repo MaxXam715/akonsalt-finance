@@ -1,0 +1,28 @@
+.G-icon {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  font-size: 16px;
+  background-color: #000;
+
+  &.strategic-consulting {
+    mask-image: url(./Variants/strategic-consulting.svg);
+    -webkit-mask-image: url(./Variants/strategic-consulting.svg);
+  }
+
+  &.risk-consulting {
+    mask-image: url(./Variants/risk-consulting.svg);
+    -webkit-mask-image: url(./Variants/risk-consulting.svg);
+  }
+
+  &.financial-consulting {
+    mask-image: url(./Variants/financial-consulting.svg);
+    -webkit-mask-image: url(./Variants/financial-consulting.svg);
+  }
+}

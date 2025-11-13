@@ -1,0 +1,13 @@
+.heading {
+  font-weight: 700;
+  font-size: 42px;
+  color: #1a5f57;
+
+  @media (max-width: 1300px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}

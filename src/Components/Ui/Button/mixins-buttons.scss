@@ -1,0 +1,199 @@
+@mixin button-reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 8px;
+  width: max-content;
+  height: max-content;
+  padding: 0;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 400;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: none;
+}
+
+@mixin button-primary {
+  @include button-reset;
+
+  & {
+    font-weight: 500;
+    background-color: #66B5DB;
+    color: #fff;
+    border-radius: 50px;
+
+    i {
+      background-color: #fff;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: #5babd1;
+    }
+
+    &[disabled] {
+      background-color: #ccc;
+    }
+  }
+}
+
+@mixin button-primary-outline {
+  @include button-reset;
+
+  & {
+    font-weight: 500;
+    background-color: transparent;
+    border-color: #5ea9ff;
+    color: #5ea9ff;
+    border-radius: 50px;
+
+    i {
+      background-color: #5ea9ff;
+    }
+
+    &:hover:not([disabled]) {
+      color: #fff;
+      background-color: #5ea9ff;
+    }
+
+    &[disabled] {
+      background-color: #ccc;
+    }
+  }
+}
+
+@mixin button-secondary {
+  @include button-reset;
+
+  & {
+    font-weight: 500;
+    background-color: #2a2e2a;
+    color: #fff;
+    border-radius: 50px;
+
+    i {
+      background-color: #fff;
+    }
+
+    &:hover:not([disabled]) {
+      color: #fff;
+      background-color: #424742;
+    }
+
+    &[disabled] {
+      background-color: #ccc;
+    }
+  }
+}
+
+@mixin button-secondary-outline {
+  @include button-reset;
+
+  & {
+    font-weight: 500;
+    background-color: transparent;
+    border-color: #2a2e2a;
+    color: #2a2e2a;
+    border-radius: 50px;
+
+    i {
+      background-color: #2a2e2a;
+    }
+
+    &:hover:not([disabled]) {
+      color: #fff;
+      background-color: #2a2e2a;
+    }
+  }
+}
+
+@mixin button-link {
+  @include button-reset;
+
+  & {
+    background-color: transparent;
+    color: var(--text-black);
+    grid-gap: 5px;
+
+    i {
+      background-color: #000;
+    }
+  }
+}
+
+@mixin button-success {
+  @include button-reset;
+
+  & {
+    font-weight: 500;
+    background-color: #3fbf8c;
+    color: #fff;
+    border-radius: 6px;
+
+    i {
+      background-color: #fff;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: #38b382;
+    }
+
+    &[disabled] {
+      background-color: #ccc;
+    }
+  }
+}
+
+@mixin button-warning {
+  @include button-reset;
+
+  & {
+    font-weight: 500;
+    background-color: #f19929;
+    color: #fff;
+    border-radius: 6px;
+
+    i {
+      background-color: #fff;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: #df8e27;
+    }
+
+    &[disabled] {
+      background-color: #ccc;
+    }
+  }
+}
+
+@mixin button-error {
+  @include button-reset;
+
+  & {
+    font-weight: 500;
+    background-color: #DB6666;
+    color: #fff;
+    border-radius: 50px;
+
+    i {
+      background-color: #fff;
+    }
+
+    &:hover:not([disabled]) {
+      background-color: #df3939;
+    }
+
+    &[disabled] {
+      background-color: #ccc;
+    }
+  }
+}

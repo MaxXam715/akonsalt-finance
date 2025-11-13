@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Onest", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.g-container {
+  max-width: calc(1420px + 100px);
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @media (max-width: 768px) {
+    max-width: calc(1420px + 32px);
+    padding: 0 16px;
+  }
+}

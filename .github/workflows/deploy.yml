@@ -16,45 +16,45 @@ env:
   TG_ID_CHANEL: "-1002204160156"
 
 jobs:
-
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Connect to server and deploy
-        uses: appleboy/ssh-action@v1.0.3
+      - uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          host: ${{env.SERVER_HOST}}
-          port: ${{env.SERVER_PORT}}
-          username: ${{env.SERVER_USER}}
-          password: ${{env.SERVER_PASS}}
-          key: ${{secrets.SSH_PRIVATE_KEY}}
-          script: |
-            cd ${{env.SERVER_PATH}};
-            git checkout master;
-            git reset --hard
-            git pull origin master;
-            cd backend
-            
-            timestamp=$(date +%s)
-            sed -i '2s/.*/'$timestamp'/' version.txt
+          node-version: '22'
 
-  telegram:
-    needs: deploy
-    if: always()
-    name: Send a message to Telegram
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send a message error to Telegram
-        if: ${{ needs.deploy.result != 'success' }}
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Run build
+        run: npm run build
+
+      - name: Deploy to Server
+        id: deploy_step
+        uses: easingthemes/ssh-deploy@main
+        with:
+          # ssh-keygen -m PEM -t rsa -b 4096
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: "-rlgoDzvc -i --delete --exclude='.htaccess'"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ env.SERVER_HOST }}
+          REMOTE_PORT: ${{ env.SERVER_PORT }}
+          REMOTE_USER: ${{ env.SERVER_USER }}
+          TARGET: ${{ env.SERVER_PATH }}
+          EXCLUDE: "/dist/, /node_modules/, /.github/"
+        continue-on-error: true
+
+      - name: Success Deploy
+        if: steps.deploy_step.outcome == 'success'
         uses: appleboy/telegram-action@master
         with:
           to: ${{ env.TG_ID_CHANEL }}
           token: ${{ env.TG_BOT_TOKEN }}
           message: |
-            ❌ Action CI/CD завершился с ошибкой :(
-
-            Проверьте логи для получения подробностей.
+            ✅ Deploy CI/CD успешно выполнен!
 
             📂 Репозиторий: https://github.com/${{ github.repository }}
             👤 "${{ github.actor }}" сделал коммит:
@@ -62,17 +62,19 @@ jobs:
 
             Посмотреть изменения: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
 
-      - name: Send a message success to Telegram
-        if: ${{ needs.deploy.result == 'success' }}
+      - name: Success Deploy
+        if: steps.deploy_step.outcome != 'success'
         uses: appleboy/telegram-action@master
         with:
           to: ${{ env.TG_ID_CHANEL }}
           token: ${{ env.TG_BOT_TOKEN }}
           message: |
-            ✅ Action CI/CD успешно выполнен!
-
+            ❌ Action CI/CD завершился с ошибкой :(
+            
+            Проверьте логи для получения подробностей.
+            
             📂 Репозиторий: https://github.com/${{ github.repository }}
             👤 "${{ github.actor }}" сделал коммит:
             📝 ${{ github.event.commits[0].message }}
-
+            
             Посмотреть изменения: https://github.com/${{ github.repository }}/commit/${{ github.sha }}

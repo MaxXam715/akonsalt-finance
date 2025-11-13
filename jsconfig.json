@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@App/*": ["/src/App/*"],
+      "@Api/*": ["/src/Api/*"],
+      "@Components/*": ["/src/Components/*"],
+      "@Store/*": ["/src/Store/*"],
+      "@Utils/*": ["/src/Utils/*"],
+      "@Icons/*": ["/src/Components/Ui/Icons/*"],
+      "@Img/*": ["/src/Assets/Img/*"],
+      "@Pages/*": ["/src/Pages/*"],
+      "@Helpers/*": ["/src/Utils/Helpers/*"]
+    }
+  }
+}
