@@ -37,7 +37,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         with:
           # ssh-keygen -m PEM -t rsa -b 4096
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc -i --delete --exclude='.htaccess'"
           SOURCE: "dist/"
           REMOTE_HOST: ${{ env.SERVER_HOST }}
