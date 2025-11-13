@@ -1,11 +1,11 @@
 import style from "./Industries.module.scss";
 import SectionName from "@Components/Common/SectionName/SectionName.jsx";
-import imgBranch_1 from "@Img//Industries/branch-1.jpg";
-import imgBranch_2 from "@Img//Industries/branch-2.jpg";
-import imgBranch_3 from "@Img//Industries/branch-3.jpg";
-import imgBranch_4 from "@Img//Industries/branch-4.jpg";
-import imgBranch_5 from "@Img//Industries/branch-5.jpg";
-import imgBranch_6 from "@Img//Industries/branch-6.jpg";
+import imgBranch_1 from "@Img/Industries/branch-1.jpg";
+import imgBranch_2 from "@Img/Industries/branch-2.jpg";
+import imgBranch_3 from "@Img/Industries/branch-3.jpg";
+import imgBranch_4 from "@Img/Industries/branch-4.jpg";
+import imgBranch_5 from "@Img/Industries/branch-5.png";
+import imgBranch_6 from "@Img/Industries/branch-6.png";
 
 export default function Industries() {
     const industriesList = [

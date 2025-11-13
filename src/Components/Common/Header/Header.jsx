@@ -19,7 +19,7 @@ export default function Header() {
                             <a href="#contacts" className={style['anchor-item']}>Контакты</a>
                         </nav>
                         <div className={style['action-container']}>
-                            <a href="mailto: gorbatenkomax@yandex.ru" className={style['btn-contact-us']}>Связаться с нами</a>
+                            <a href={`mailto: ${import.meta.env.VITE_EMAIL}`} className={style['btn-contact-us']}>Связаться с нами</a>
                         </div>
                     </div>
                 </div>
