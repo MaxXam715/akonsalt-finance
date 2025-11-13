@@ -47,6 +47,7 @@
         text-align: right;
         text-decoration: underline;
         text-underline-offset: 3px;
+        cursor: pointer;
       }
     }
 
@@ -65,6 +66,7 @@
       .right-col {
         .link {
           text-align: center;
+          cursor: pointer;
         }
       }
     }
